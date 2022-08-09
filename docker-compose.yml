@@ -1,0 +1,75 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: '3.1'
+services:
+    redis:
+        image: 'redis:alpine'
+        container_name: k-symfony-redis
+
+    mariadb:
+        image: 'mariadb:10.1'
+        container_name: k-symfony-mariadb
+        working_dir: /application
+        volumes:
+            - './application:/application'
+            - './mysql:/var/lib/mysql:rw'
+        environment:
+            - MYSQL_ROOT_PASSWORD=951357456852
+            - MYSQL_DATABASE=v
+            - MYSQL_USER=kalasymfony
+            - MYSQL_PASSWORD=kalasymfony654
+        ports:
+            - '3306:3306'
+
+    postgres:
+        image: 'postgres:10.5-alpine'
+        container_name: k-symfony-postgres
+        working_dir: /application
+        volumes:
+            - './application:/application'
+            - './postgres:/var/lib/postgresql:rw'
+        environment:
+            - POSTGRES_USER=kalasymfony
+            - POSTGRES_PASSWORD=kalasymfony654
+            - POSTGRES_DB=dummysymfony
+        ports:
+            - '5432:5432'
+
+    webserver:
+        restart: always
+        build: phpdocker/nginx
+        container_name: k-symfony-web
+        working_dir: /application
+        volumes:
+            - './application:/application'
+            - './phpdocker/nginx/default.conf:/etc/nginx/conf.d/default.conf'
+        ports:
+            - '40000:80'
+            - '40001:81'
+            - '40009:89'
+
+    php-fpm7:
+        build: phpdocker/php-fpm7
+        container_name: k-symfony-php7
+        working_dir: /application
+        volumes:
+            - './application:/application'
+            - './phpdocker/php-fpm7/php-ini-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini'
+
+    php-fpm8:
+        build: phpdocker/php-fpm8
+        container_name: k-symfony-php8
+        working_dir: /application
+        volumes:
+            - './application:/application'
+            - './phpdocker/php-fpm8/php-ini-overrides.ini:/etc/php/8.1/fpm/conf.d/99-overrides.ini'
+
+    php-adminer:
+        build: phpdocker/php-fpm7
+        container_name: k-symfony-adminer
+        working_dir: /application
+        volumes:
+            - './adminer:/application'
+            - './phpdocker/php-fpm7/php-ini-overrides.ini:/etc/php/7.4/fpm/conf.d/99-overrides.ini'
+
