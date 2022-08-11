@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # run things inside the container
 # set rights for MariaDB
-mysql --user=root --password=951357456852 < migrations/system_user.sql
+echo "Set user things"
+mysql --user=root --password=951357456852 < /application/migrations/system_user.sql
+echo "Things in db probably set"
 # now we can migrate things

@@ -61,3 +61,13 @@ kw_form for data manipulation and also Clipr for running tasks, so you can
 run things inside php box and with docker syntax also from external environment.
 Also many things can be set by running with different environment variables,
 so you can change default users and passwords used to connections.
+
+## Caveats
+
+MariaDB install likes to crash with that chain of commands from CLI, so then
+it's necessary to run its steps directly from included Adminer. Log as root
+into database and then copy content of script
+*application/migrations/system_user.sql* into SQL query textarea and
+run it. Then you can run again install from CLI to process migrations.
+Or if you are comfortable with CLI and phinx you can paste the command
+directly into php docker shell.

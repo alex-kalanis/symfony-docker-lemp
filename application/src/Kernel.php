@@ -11,8 +11,10 @@ class Kernel extends BaseKernel
 
     public function initStorage(): void
     {
-        // just init my storage
-        require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'storage.php';
+        if (class_exists('\kalanis\kw_mapper\Storage\Database\ConfigStorage')) {
+            // just init my storage
+            require_once __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'storage.php';
+        }
     }
 
     public function initLangs(): void
