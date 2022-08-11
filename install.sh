@@ -4,7 +4,7 @@
 # at first run docker
 docker-compose up -d
 # then run things inside mariadb - rights
-docker exec -it k-symfony-php7 first_db_run.sh
+docker exec -it k-symfony-mariadb /bin/bash first_db_run.sh
 # then run things inside php - migrations
-docker exec -it k-symfony-php7 first_php_run.sh
+docker exec -it k-symfony-php7 /bin/bash first_php_run.sh
 # now you're good
