@@ -10,10 +10,11 @@ services:
     mariadb:
         image: 'mariadb:10.1'
         container_name: k-symfony-mariadb
-        working_dir: /application
+        working_dir: /
         volumes:
-            - './application:/application'
-            - './mysql:/var/lib/mysql:rw'
+            - './application/first_db_run.sh:/first_db_run.sh'
+            - './application/migrations/system_user.sql:/system_user.sql'
+            - './mysql:/var/lib/mysql'
         environment:
             - MYSQL_ROOT_PASSWORD=951357456852
             - MYSQL_DATABASE=dummysymfony
@@ -28,7 +29,7 @@ services:
         working_dir: /application
         volumes:
             - './application:/application'
-            - './postgres:/var/lib/postgresql:rw'
+            - './postgres:/var/lib/postgresql'
         environment:
             - POSTGRES_USER=kalasymfony
             - POSTGRES_PASSWORD=kalasymfony654
