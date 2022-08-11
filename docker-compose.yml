@@ -13,7 +13,7 @@ services:
         working_dir: /
         volumes:
             - './application/first_db_run.sh:/first_db_run.sh'
-            - './application/migrations/system_user.sql:/system_user.sql'
+            - './application/system_user.sql:/system_user.sql'
             - './mysql:/var/lib/mysql'
         environment:
             - MYSQL_ROOT_PASSWORD=951357456852
