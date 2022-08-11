@@ -61,3 +61,11 @@ kw_form for data manipulation and also Clipr for running tasks, so you can
 run things inside php box and with docker syntax also from external environment.
 Also many things can be set by running with different environment variables,
 so you can change default users and passwords used to connections.
+
+## Caveats
+
+If you got problems with database migrations, you will need to check inside
+the docker if there already are all necessary files to run configurations
+*(system_user.sql and first_db_run.sh)* or exists *mysql socket*. If not,
+you will need to process files manually via Adminer. Then re-run *install.sh*
+or type commands directly into CLI. The waiting time is around 20 seconds.

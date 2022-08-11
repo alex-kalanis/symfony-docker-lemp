@@ -3,6 +3,8 @@
 # install this application, so it's simple to run it
 # at first run docker
 docker-compose up -d
+echo "Wait for db boot"
+sleep 20
 # then run things inside mariadb - rights
 docker exec -it k-symfony-mariadb /bin/bash first_db_run.sh
 # then run things inside php - migrations
