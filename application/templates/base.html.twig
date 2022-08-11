@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs" class="h-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %}{% endblock %}</title>
+        {% block description %}{% endblock %}
+        
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+        <meta name="theme-color" content="#ffffff">
+        {% block meta %}{% endblock %}
+        <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <link rel="stylesheet" href="/bootstrap.min.css">
+        <script src="/bootstrap.min.js"></script>
+    </head>
+    <body id="body" class="d-flex flex-column h-100">
+        <div class="preloader"></div>
+        <div class="header-navbar bottom-shadow">
+            <div class="container">
+                <nav class="navbar navbar-expand-xl navbar-dark bg-primary">
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item nav-item-first nav-item-highlighted {% if app.request.get('_route') == 'index' %} active{% endif %}">
+                                <a class="nav-link border rounded main-action" href="{{ path('index') }}">Listing</a>
+                            </li>
+                            <li class="nav-item{% if app.request.get('_route') == 'add' %} active{% endif %}">
+                                <a class="nav-link border rounded nav-link-one-line" href="{{ path('add') }}">Add</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <main role="main" class="flex-shrink-0">
+            {% block body %}{% endblock %}
+        </main>
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </body>
+</html>

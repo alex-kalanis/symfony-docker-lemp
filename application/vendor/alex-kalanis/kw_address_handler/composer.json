@@ -1,0 +1,33 @@
+{
+    "name": "alex-kalanis/kw_address_handler",
+    "description": "Address handler for KWCMS",
+    "keywords": [
+        "address",
+        "url",
+        "handle"
+    ],
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "alex-kalanis/kw_input": ">=2.0",
+        "phpunit/phpunit": ">=7.2"
+    },
+    "suggest": {
+        "alex-kalanis/kw_input": "Use inputs from different sources"
+    },
+    "autoload": {
+        "psr-4": {
+            "kalanis\\kw_address_handler\\": "php-src/"
+        }
+    },
+    "scripts": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

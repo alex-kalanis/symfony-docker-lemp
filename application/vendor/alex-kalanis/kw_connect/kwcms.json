@@ -1,0 +1,18 @@
+{
+  "author": "kalanis",
+  "name": "kw_connect",
+  "description": "Connecting inputs into their respective targets",
+  "source": "https://github.com/alex-kalanis/kw_connect",
+  "license": "BSD-3-Clause",
+  "require": {
+    "alex-kalanis/kw_input": "dev-master",
+    "alex-kalanis/filter": "dev-master",
+    "alex-kalanis/sorter": "dev-master",
+    "alex-kalanis/pager": "dev-master",
+    "php": ">=7.2.0"
+  },
+  "require-dev": {
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

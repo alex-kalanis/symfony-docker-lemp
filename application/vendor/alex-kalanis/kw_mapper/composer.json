@@ -1,0 +1,55 @@
+{
+    "name": "alex-kalanis/kw_mapper",
+    "description": "Mapper for accessing resources in KWCMS",
+    "keywords": [
+        "mapper",
+        "files",
+        "file",
+        "ldap",
+        "database",
+        "mysql",
+        "mssql",
+        "oracle",
+        "postgres",
+        "sqlite",
+        "mongodb",
+        "sql"
+    ],
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "require": {
+        "ext-ctype": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "php": ">=7.2.0"
+    },
+    "require-dev": {
+        "alex-kalanis/kw_storage": ">=1.0",
+        "ext-pdo": "*",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": ">=7.2"
+    },
+    "suggest": {
+        "ext-pdo": "Content stored in database",
+        "ext-yaml": "Content encoded in YAML",
+        "ext-ldap": "Access to LDAP database",
+        "ext-mysqli": "Older connection to MySQL database",
+        "ext-mongodb": "Content stored in MongoDB",
+        "ext-dba": "Content stored in DBA",
+        "ext-odbc": "Content accessible via ODBC",
+        "ext-win32std": "Connect to Win32 API via external library",
+        "ext-com_dotnet": "Connect to Win API via .Net platform",
+        "alex-kalanis/kw_storage": "Local storage for accessing resources"
+    },
+    "autoload": {
+        "psr-4": {
+            "kalanis\\kw_mapper\\": "php-src/"
+        }
+    },
+    "scripts": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

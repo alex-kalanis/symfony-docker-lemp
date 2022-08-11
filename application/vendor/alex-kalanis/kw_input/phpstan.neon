@@ -1,0 +1,20 @@
+parameters:
+	level: 9
+	paths:
+		- 'php-src'
+	scanFiles:
+		- 'php-src/Loaders/File.php' # $_FILES is "problematic"
+		- 'php-src/Parsers/Files.php' # $_FILES is "problematic"
+		- 'php-tests/CommonTestClass.php'
+	excludePaths:
+		- 'php-src/Loaders/File.php' # $_FILES is "problematic"
+		- 'php-src/Parsers/Files.php' # $_FILES is "problematic"
+		- 'php-tests/_autoload.php'
+		- 'php-tests/_bootstrap.php'
+		- 'php-tests/CommonTestClass.php'
+	bootstrapFiles:
+		- 'php-tests/_autoload.php'
+	checkGenericClassInNonGenericObjectType: false
+#	ignoreErrors:
+#		# solved by unit tests
+#		- '#Cannot call method [a-zA-Z0-9\\_]+\(\) on kalanis\\kw_storage\\Storage#'

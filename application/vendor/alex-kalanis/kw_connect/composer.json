@@ -1,0 +1,33 @@
+{
+  "name": "alex-kalanis/kw_connect",
+  "description": "Connecting lookups into their respective engines",
+  "keywords": [
+    "parameters",
+    "database",
+    "lookup"
+  ],
+  "license": "BSD-3-Clause",
+  "type": "library",
+  "require": {
+    "php": ">=7.3.0"
+  },
+  "require-dev": {
+    "alex-kalanis/kw_mapper": ">=0.7",
+    "dibi/dibi": "~4.2",
+    "doctrine/dbal": "~3.1",
+    "nette/database": "~3.1",
+    "phpstan/phpstan": "^1.0",
+    "phpstan/phpstan-phpunit": "^1.0",
+    "friendsofphp/php-cs-fixer": "^3.0",
+    "phpunit/phpunit": ">=7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "kalanis\\kw_connect\\": "php-src/"
+    }
+  },
+  "scripts": {
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

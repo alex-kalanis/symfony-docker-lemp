@@ -1,0 +1,19 @@
+parameters:
+	level: 9
+	paths:
+		- 'php-src'
+	scanFiles:
+		- 'php-tests/CommonTestClass.php'
+	excludePaths:
+		- 'php-tests/_autoload.php'
+		- 'php-tests/_bootstrap.php'
+		- 'php-tests/CommonTestClass.php'
+	bootstrapFiles:
+		- 'php-tests/_bootstrap.php'
+	checkGenericClassInNonGenericObjectType: false
+	ignoreErrors:
+		# solved by unit tests
+		-
+			message: '#on kalanis\\kw_address_handler\\Sources\\Sources\|null.#'
+			path: 'php-src/Handler.php'
+			# tested before it can do some problems

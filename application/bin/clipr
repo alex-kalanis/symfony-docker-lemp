@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+
+# kw_clipr - starter for unix systems
+# escape problems with removed escaping of quotes - just run it directly
+
+if (PHP_SAPI !== 'cli') {
+    die('This script can be run only from *nix CLI');
+}
+
+include 'clipr.php';

@@ -1,0 +1,17 @@
+{
+  "author": "kalanis",
+  "name": "kw_clipr",
+  "description": "CLI Processor",
+  "source": "https://github.com/alex-kalanis/kw_clipr",
+  "license": "BSD-3-Clause",
+  "require": {
+    "alex-kalanis/kw_input": "dev-master",
+    "php": ">=7.2.0"
+  },
+  "suggest": {
+  },
+  "require-dev": {
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

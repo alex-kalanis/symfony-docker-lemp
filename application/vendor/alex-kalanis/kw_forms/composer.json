@@ -1,0 +1,41 @@
+{
+  "name": "alex-kalanis/kw_forms",
+  "description": "HTML Forms for KWCMS",
+  "keywords": [
+    "form",
+    "html",
+    "forms"
+  ],
+  "license": "BSD-3-Clause",
+  "type": "library",
+  "require": {
+    "ext-fileinfo": "*",
+    "ext-gd": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "alex-kalanis/kw_input": ">=2.0",
+    "alex-kalanis/kw_rules": ">=2.0",
+    "alex-kalanis/kw_storage": ">=1.0",
+    "alex-kalanis/kw_templates": ">=2.0",
+    "php": ">=7.3.0"
+  },
+  "suggest": {
+    "firebase/php-jwt": "PHP package for JWT"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^1.0",
+    "phpstan/phpstan-phpunit": "^1.0",
+    "friendsofphp/php-cs-fixer": "^3.0",
+    "firebase/php-jwt": "~6.2",
+    "phpunit/phpunit": ">=7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "kalanis\\kw_forms\\": "php-src/"
+    }
+  },
+  "scripts": {
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

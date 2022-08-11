@@ -1,0 +1,14 @@
+{
+  "author": "kalanis",
+  "name": "kw_rules",
+  "description": "Entry rules for KWCMS",
+  "source": "https://github.com/alex-kalanis/kw_rules",
+  "license": "BSD-3-Clause",
+  "require": {
+    "php": ">=7.2.0"
+  },
+  "require-dev": {
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

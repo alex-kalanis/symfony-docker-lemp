@@ -1,0 +1,22 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+index:
+  path:     /
+  controller: App\Controller\AddressController::listing
+
+add:
+  path:     /add
+  controller: App\Controller\AddressController::add
+
+remove:
+  path:     /remove/{id}
+  controller: App\Controller\AddressController::remove
+
+note:
+  path:     /notes/{slug}
+  controller: App\Controller\AddressController::note
+
+edit:
+  path:     /{slug}
+  controller: App\Controller\AddressController::edit

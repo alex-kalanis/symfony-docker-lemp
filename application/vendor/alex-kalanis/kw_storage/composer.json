@@ -1,0 +1,40 @@
+{
+    "name": "alex-kalanis/kw_storage",
+    "description": "Universal storage library for store data as key-value pairs",
+    "keywords": [
+        "cache",
+        "volume",
+        "storage"
+    ],
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "require": {
+        "php": ">=7.2.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpunit/phpunit": ">=7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "kalanis\\kw_storage\\": "php-src/"
+        }
+    },
+    "suggest": {
+        "alex-kalanis/redis-wrapper": "PHP wrapper for questioning Redis as file storage",
+        "alex-kalanis/memcache-wrapper": "PHP wrapper for questioning Memcache as file storage"
+    },
+    "scripts": {
+    },
+    "authors": [
+        {
+            "name": "Petr Plsek",
+            "homepage": "http://www.kalanys.com",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

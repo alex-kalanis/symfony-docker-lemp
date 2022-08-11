@@ -1,0 +1,17 @@
+parameters:
+	level: 6
+	# because '\kalanis\kw_clipr\Tasks\Params::__construct' contains 'array_combine' which returns only array on php8 and also false on php7-
+	paths:
+		- 'php-src'
+	scanFiles:
+		- 'php-tests/CommonTestClass.php'
+	excludePaths:
+		- 'php-tests/_autoload.php'
+		- 'php-tests/_bootstrap.php'
+		- 'php-tests/CommonTestClass.php'
+	bootstrapFiles:
+		- 'php-tests/_bootstrap.php'
+	checkGenericClassInNonGenericObjectType: false
+#	ignoreErrors:
+#		# solved by unit tests
+#		- '#Cannot call method [a-zA-Z0-9\\_]+\(\) on kalanis\\kw_storage\\Storage#'

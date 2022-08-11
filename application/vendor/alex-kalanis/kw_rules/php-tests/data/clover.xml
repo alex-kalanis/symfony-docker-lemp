@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1655771728">
+  <project timestamp="1655771728">
+    <package name="kalanis\kw_rules\Exceptions">
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Exceptions/RuleException.php">
+        <class name="kalanis\kw_rules\Exceptions\RuleException" namespace="kalanis\kw_rules\Exceptions">
+          <metrics complexity="5" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="9" coveredelements="9"/>
+        </class>
+        <line num="15" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="178"/>
+        <line num="17" type="stmt" count="178"/>
+        <line num="18" type="stmt" count="178"/>
+        <line num="19" type="stmt" count="178"/>
+        <line num="21" type="method" name="setPrev" visibility="public" complexity="2" crap="2" count="6"/>
+        <line num="23" type="stmt" count="6"/>
+        <line num="24" type="stmt" count="6"/>
+        <line num="26" type="method" name="getPrev" visibility="public" complexity="2" crap="2" count="4"/>
+        <line num="28" type="stmt" count="4"/>
+        <metrics loc="30" ncloc="29" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="9" coveredelements="9"/>
+      </file>
+    </package>
+    <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Interfaces/IRuleFactory.php">
+      <metrics loc="23" ncloc="13" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Interfaces/IRules.php">
+      <metrics loc="116" ncloc="60" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Interfaces/IValidate.php">
+      <metrics loc="33" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Interfaces/IValidateFile.php">
+      <metrics loc="40" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="kalanis\kw_rules\Rules">
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/ARule.php">
+        <class name="kalanis\kw_rules\Rules\ARule" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="25" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/Always.php">
+        <class name="kalanis\kw_rules\Rules\Always" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="18" type="method" name="validate" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="20" type="stmt" count="5"/>
+        <metrics loc="22" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/Equals.php">
+        <class name="kalanis\kw_rules\Rules\Equals" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="17" type="method" name="validate" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="2"/>
+        <metrics loc="23" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/Factory.php">
+        <class name="kalanis\kw_rules\Rules\Factory" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
+        </class>
+        <line num="67" type="method" name="getRule" visibility="public" complexity="3" crap="3" count="58"/>
+        <line num="69" type="stmt" count="58"/>
+        <line num="70" type="stmt" count="44"/>
+        <line num="71" type="stmt" count="44"/>
+        <line num="72" type="stmt" count="44"/>
+        <line num="73" type="stmt" count="44"/>
+        <line num="76" type="stmt" count="15"/>
+        <metrics loc="78" ncloc="57" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/GreaterEquals.php">
+        <class name="kalanis\kw_rules\Rules\GreaterEquals" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="2"/>
+        <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/GreaterThan.php">
+        <class name="kalanis\kw_rules\Rules\GreaterThan" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="1"/>
+        <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/InRange.php">
+        <class name="kalanis\kw_rules\Rules\InRange" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="3" crap="3" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="4"/>
+        <metrics loc="27" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/InRangeEquals.php">
+        <class name="kalanis\kw_rules\Rules\InRangeEquals" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="3" crap="3" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="2"/>
+        <metrics loc="27" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/IsActiveDomain.php">
+        <class name="kalanis\kw_rules\Rules\IsActiveDomain" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="25" ncloc="19" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/IsBool.php">
+        <class name="kalanis\kw_rules\Rules\IsBool" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="17" type="method" name="validate" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="19" type="stmt" count="5"/>
+        <line num="20" type="stmt" count="4"/>
+        <line num="22" type="stmt" count="1"/>
+        <metrics loc="23" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/IsDomain.php">
+        <class name="kalanis\kw_rules\Rules\IsDomain" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="13" type="method" name="checkValue" visibility="protected" complexity="1" crap="1" count="6"/>
+        <line num="15" type="stmt" count="6"/>
+        <metrics loc="17" ncloc="10" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/IsEmail.php">
+        <class name="kalanis\kw_rules\Rules\IsEmail" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="13" type="method" name="checkValue" visibility="protected" complexity="1" crap="1" count="6"/>
+        <line num="15" type="stmt" count="6"/>
+        <metrics loc="17" ncloc="10" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/IsEmpty.php">
+        <class name="kalanis\kw_rules\Rules\IsEmpty" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="17" type="method" name="validate" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="19" type="stmt" count="5"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="2"/>
+        <metrics loc="23" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/IsFilled.php">
+        <class name="kalanis\kw_rules\Rules\IsFilled" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="17" type="method" name="validate" visibility="public" complexity="2" crap="2" count="11"/>
+        <line num="19" type="stmt" count="11"/>
+        <line num="20" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="8"/>
+        <metrics loc="23" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/IsInArray.php">
+        <class name="kalanis\kw_rules\Rules\IsInArray" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="3"/>
+        <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/IsJsonString.php">
+        <class name="kalanis\kw_rules\Rules\IsJsonString" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="4" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
+        </class>
+        <line num="17" type="method" name="validate" visibility="public" complexity="4" crap="4" count="7"/>
+        <line num="19" type="stmt" count="7"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="23" type="stmt" count="5"/>
+        <line num="24" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="3"/>
+        <metrics loc="27" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/IsNotInArray.php">
+        <class name="kalanis\kw_rules\Rules\IsNotInArray" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="3"/>
+        <line num="24" type="stmt" count="2"/>
+        <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/IsNumeric.php">
+        <class name="kalanis\kw_rules\Rules\IsNumeric" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="17" type="method" name="validate" visibility="public" complexity="2" crap="2" count="6"/>
+        <line num="19" type="stmt" count="6"/>
+        <line num="20" type="stmt" count="4"/>
+        <line num="22" type="stmt" count="2"/>
+        <metrics loc="23" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/IsString.php">
+        <class name="kalanis\kw_rules\Rules\IsString" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="17" type="method" name="validate" visibility="public" complexity="2" crap="2" count="8"/>
+        <line num="19" type="stmt" count="8"/>
+        <line num="20" type="stmt" count="6"/>
+        <line num="22" type="stmt" count="2"/>
+        <metrics loc="23" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/LengthEquals.php">
+        <class name="kalanis\kw_rules\Rules\LengthEquals" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="1"/>
+        <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/LengthMax.php">
+        <class name="kalanis\kw_rules\Rules\LengthMax" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="2"/>
+        <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/LengthMin.php">
+        <class name="kalanis\kw_rules\Rules\LengthMin" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="2"/>
+        <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/LesserEquals.php">
+        <class name="kalanis\kw_rules\Rules\LesserEquals" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="2"/>
+        <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/LesserThan.php">
+        <class name="kalanis\kw_rules\Rules\LesserThan" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="21" type="stmt" count="3"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="1"/>
+        <metrics loc="25" ncloc="20" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/MatchAll.php">
+        <class name="kalanis\kw_rules\Rules\MatchAll" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="4" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="4" crap="4" count="4"/>
+        <line num="21" type="stmt" count="4"/>
+        <line num="22" type="stmt" count="4"/>
+        <line num="25" type="stmt" count="4"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="32" type="stmt" count="4"/>
+        <line num="34" type="stmt" count="3"/>
+        <line num="36" type="stmt" count="1"/>
+        <metrics loc="37" ncloc="27" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="9" elements="10" coveredelements="10"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/MatchAny.php">
+        <class name="kalanis\kw_rules\Rules\MatchAny" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="3" crap="3" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="33" type="stmt" count="2"/>
+        <metrics loc="35" ncloc="25" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/MatchByEntry.php">
+        <class name="kalanis\kw_rules\Rules\MatchByEntry" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
+        </class>
+        <line num="22" type="method" name="validate" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="24" type="stmt" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="29" type="stmt" count="1"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <metrics loc="33" ncloc="26" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/MatchesPattern.php">
+        <class name="kalanis\kw_rules\Rules\MatchesPattern" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="17" type="method" name="validate" visibility="public" complexity="2" crap="2" count="12"/>
+        <line num="19" type="stmt" count="12"/>
+        <line num="20" type="stmt" count="9"/>
+        <line num="22" type="stmt" count="3"/>
+        <metrics loc="23" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/NotEquals.php">
+        <class name="kalanis\kw_rules\Rules\NotEquals" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="17" type="method" name="validate" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="19" type="stmt" count="2"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <metrics loc="23" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/OutRange.php">
+        <class name="kalanis\kw_rules\Rules\OutRange" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="3" crap="3" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="4"/>
+        <metrics loc="26" ncloc="21" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/OutRangeEquals.php">
+        <class name="kalanis\kw_rules\Rules\OutRangeEquals" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+        </class>
+        <line num="19" type="method" name="validate" visibility="public" complexity="3" crap="3" count="5"/>
+        <line num="21" type="stmt" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="25" type="stmt" count="2"/>
+        <metrics loc="26" ncloc="21" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="5" coveredelements="5"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/ProcessCallback.php">
+        <class name="kalanis\kw_rules\Rules\ProcessCallback" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="4" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+        </class>
+        <line num="22" type="method" name="checkValue" visibility="protected" complexity="2" crap="2" count="9"/>
+        <line num="24" type="stmt" count="9"/>
+        <line num="25" type="stmt" count="4"/>
+        <line num="27" type="stmt" count="5"/>
+        <line num="30" type="method" name="validate" visibility="public" complexity="2" crap="2" count="11"/>
+        <line num="32" type="stmt" count="11"/>
+        <line num="33" type="stmt" count="6"/>
+        <line num="35" type="stmt" count="6"/>
+        <metrics loc="36" ncloc="26" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/TCheckArrayRange.php">
+        <class name="TCheckArrayRange" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="4" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+        </class>
+        <line num="23" type="method" name="checkValue" visibility="protected" complexity="2" crap="2" count="8"/>
+        <line num="25" type="stmt" count="8"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="7"/>
+        <line num="36" type="method" name="checkRule" visibility="protected" complexity="2" crap="2" count="7"/>
+        <line num="38" type="stmt" count="7"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="6"/>
+        <metrics loc="43" ncloc="28" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/TCheckArrayString.php">
+        <class name="TCheckArrayString" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="5" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="10" coveredelements="10"/>
+        </class>
+        <line num="23" type="method" name="checkValue" visibility="protected" complexity="2" crap="2" count="21"/>
+        <line num="25" type="stmt" count="21"/>
+        <line num="26" type="stmt" count="5"/>
+        <line num="28" type="stmt" count="16"/>
+        <line num="36" type="method" name="checkRule" visibility="protected" complexity="3" crap="3" count="12"/>
+        <line num="38" type="stmt" count="12"/>
+        <line num="39" type="stmt" count="6"/>
+        <line num="41" type="stmt" count="6"/>
+        <line num="42" type="stmt" count="4"/>
+        <line num="44" type="stmt" count="2"/>
+        <metrics loc="46" ncloc="31" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="10" coveredelements="10"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/TCheckEntry.php">
+        <class name="TCheckEntry" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
+        </class>
+        <line num="24" type="method" name="checkValue" visibility="protected" complexity="3" crap="3" count="4"/>
+        <line num="26" type="stmt" count="4"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="30" type="stmt" count="1"/>
+        <line num="32" type="stmt" count="2"/>
+        <metrics loc="34" ncloc="24" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/TCheckInt.php">
+        <class name="TCheckInt" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="15" type="method" name="checkValue" visibility="protected" complexity="1" crap="1" count="21"/>
+        <line num="17" type="stmt" count="21"/>
+        <metrics loc="19" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/TCheckRange.php">
+        <class name="TCheckRange" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="5" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+        </class>
+        <line num="23" type="method" name="checkValue" visibility="protected" complexity="2" crap="2" count="26"/>
+        <line num="25" type="stmt" count="26"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="24"/>
+        <line num="29" type="stmt" count="22"/>
+        <line num="30" type="stmt" count="22"/>
+        <line num="31" type="stmt" count="22"/>
+        <line num="39" type="method" name="checkRule" visibility="protected" complexity="3" crap="3" count="42"/>
+        <line num="41" type="stmt" count="42"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="42"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="41"/>
+        <metrics loc="49" ncloc="34" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/TCheckRules.php">
+        <class name="TCheckRules" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="6" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="10" coveredelements="10"/>
+        </class>
+        <line num="23" type="method" name="checkValue" visibility="protected" complexity="2" crap="2" count="12"/>
+        <line num="25" type="stmt" count="12"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="11"/>
+        <line num="36" type="method" name="checkRule" visibility="protected" complexity="4" crap="4" count="11"/>
+        <line num="38" type="stmt" count="11"/>
+        <line num="39" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="10"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="9"/>
+        <metrics loc="46" ncloc="31" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="10" coveredelements="10"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/TCheckString.php">
+        <class name="TCheckString" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="15" type="method" name="checkValue" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="17" type="stmt" count="2"/>
+        <metrics loc="19" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/TRule.php">
+        <class name="TRule" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="8" coveredelements="8"/>
+        </class>
+        <line num="21" type="method" name="setAgainstValue" visibility="public" complexity="1" crap="1" count="151"/>
+        <line num="23" type="stmt" count="151"/>
+        <line num="24" type="stmt" count="124"/>
+        <line num="30" type="method" name="checkValue" visibility="protected" complexity="1" crap="1" count="15"/>
+        <line num="32" type="stmt" count="15"/>
+        <line num="35" type="method" name="setErrorText" visibility="public" complexity="1" crap="1" count="9"/>
+        <line num="37" type="stmt" count="9"/>
+        <line num="38" type="stmt" count="9"/>
+        <metrics loc="39" ncloc="25" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="8" coveredelements="8"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/UrlExists.php">
+        <class name="kalanis\kw_rules\Rules\UrlExists" namespace="kalanis\kw_rules\Rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="26" ncloc="20" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="kalanis\kw_rules\Rules\External">
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/External/IsDate.php">
+        <class name="kalanis\kw_rules\Rules\External\IsDate" namespace="kalanis\kw_rules\Rules\External" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="29" ncloc="21" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/External/IsDateRegex.php">
+        <class name="kalanis\kw_rules\Rules\External\IsDateRegex" namespace="kalanis\kw_rules\Rules\External" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="21" ncloc="15" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/External/IsEuVat.php">
+        <class name="kalanis\kw_rules\Rules\External\IsEuVat" namespace="kalanis\kw_rules\Rules\External" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="29" ncloc="21" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/External/IsPostCode.php">
+        <class name="kalanis\kw_rules\Rules\External\IsPostCode" namespace="kalanis\kw_rules\Rules\External" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="6" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="50" ncloc="41" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/External/IsTelephone.php">
+        <class name="kalanis\kw_rules\Rules\External\IsTelephone" namespace="kalanis\kw_rules\Rules\External" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="38" ncloc="31" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="kalanis\kw_rules\Rules\File">
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/File/AFileRule.php">
+        <class name="kalanis\kw_rules\Rules\File\AFileRule" namespace="kalanis\kw_rules\Rules\File" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="26" ncloc="16" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/File/Factory.php">
+        <class name="kalanis\kw_rules\Rules\File\Factory" namespace="kalanis\kw_rules\Rules\File" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
+        </class>
+        <line num="38" type="method" name="getRule" visibility="public" complexity="3" crap="3" count="52"/>
+        <line num="40" type="stmt" count="52"/>
+        <line num="41" type="stmt" count="13"/>
+        <line num="42" type="stmt" count="13"/>
+        <line num="43" type="stmt" count="13"/>
+        <line num="44" type="stmt" count="13"/>
+        <line num="47" type="stmt" count="40"/>
+        <metrics loc="49" ncloc="38" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/File/FileExists.php">
+        <class name="kalanis\kw_rules\Rules\File\FileExists" namespace="kalanis\kw_rules\Rules\File" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
+        </class>
+        <line num="17" type="method" name="validate" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="19" type="stmt" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="22" type="stmt" count="1"/>
+        <line num="25" type="stmt" count="1"/>
+        <metrics loc="27" ncloc="22" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/File/FileMaxSize.php">
+        <class name="kalanis\kw_rules\Rules\File\FileMaxSize" namespace="kalanis\kw_rules\Rules\File" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="7" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="24" coveredelements="24"/>
+        </class>
+        <line num="17" type="method" name="checkValue" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="19" type="stmt" count="5"/>
+        <line num="22" type="method" name="validate" visibility="public" complexity="2" crap="2" count="5"/>
+        <line num="24" type="stmt" count="5"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="29" type="method" name="fileSizeString2size" visibility="protected" complexity="4" crap="4" count="5"/>
+        <line num="31" type="stmt" count="5"/>
+        <line num="32" type="stmt" count="5"/>
+        <line num="33" type="stmt" count="5"/>
+        <line num="34" type="stmt" count="5"/>
+        <line num="35" type="stmt" count="5"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="38" type="stmt" count="2"/>
+        <line num="39" type="stmt" count="3"/>
+        <line num="40" type="stmt" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="44" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="48" type="stmt" count="5"/>
+        <metrics loc="50" ncloc="45" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="21" elements="24" coveredelements="24"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/File/FileMimeEquals.php">
+        <class name="kalanis\kw_rules\Rules\File\FileMimeEquals" namespace="kalanis\kw_rules\Rules\File" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
+        </class>
+        <line num="21" type="method" name="validate" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="28" type="stmt" count="1"/>
+        <metrics loc="30" ncloc="25" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/File/FileMimeList.php">
+        <class name="kalanis\kw_rules\Rules\File\FileMimeList" namespace="kalanis\kw_rules\Rules\File" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="6" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="12" coveredelements="12"/>
+        </class>
+        <line num="21" type="method" name="validate" visibility="public" complexity="4" crap="4" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="2"/>
+        <line num="25" type="stmt" count="2"/>
+        <line num="26" type="stmt" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="40" type="method" name="checkRule" visibility="protected" complexity="2" crap="2" count="4"/>
+        <line num="42" type="stmt" count="4"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="2"/>
+        <metrics loc="47" ncloc="37" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="12" coveredelements="12"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/File/FileReceived.php">
+        <class name="kalanis\kw_rules\Rules\File\FileReceived" namespace="kalanis\kw_rules\Rules\File" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="17" type="method" name="validate" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="1"/>
+        <metrics loc="23" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/File/FileSent.php">
+        <class name="kalanis\kw_rules\Rules\File\FileSent" namespace="kalanis\kw_rules\Rules\File" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="17" type="method" name="validate" visibility="public" complexity="2" crap="2" count="3"/>
+        <line num="19" type="stmt" count="3"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="1"/>
+        <metrics loc="23" ncloc="18" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/File/ImageIs.php">
+        <class name="kalanis\kw_rules\Rules\File\ImageIs" namespace="kalanis\kw_rules\Rules\File" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
+        </class>
+        <line num="17" type="method" name="validate" visibility="public" complexity="3" crap="3" count="2"/>
+        <line num="19" type="stmt" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <metrics loc="28" ncloc="23" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/File/ImageSizeEquals.php">
+        <class name="kalanis\kw_rules\Rules\File\ImageSizeEquals" namespace="kalanis\kw_rules\Rules\File" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="7" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="12" coveredelements="12"/>
+        </class>
+        <line num="20" type="method" name="validate" visibility="public" complexity="5" crap="5" count="6"/>
+        <line num="22" type="stmt" count="6"/>
+        <line num="23" type="stmt" count="6"/>
+        <line num="24" type="stmt" count="6"/>
+        <line num="25" type="stmt" count="6"/>
+        <line num="26" type="stmt" count="6"/>
+        <line num="27" type="stmt" count="1"/>
+        <line num="31" type="stmt" count="5"/>
+        <line num="34" type="method" name="checkValue" visibility="protected" complexity="2" crap="2" count="7"/>
+        <line num="36" type="stmt" count="7"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="39" type="stmt" count="6"/>
+        <metrics loc="41" ncloc="36" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="12" coveredelements="12"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/File/ImageSizeList.php">
+        <class name="kalanis\kw_rules\Rules\File\ImageSizeList" namespace="kalanis\kw_rules\Rules\File" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="6" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+        </class>
+        <line num="20" type="method" name="validate" visibility="public" complexity="6" crap="6" count="6"/>
+        <line num="22" type="stmt" count="6"/>
+        <line num="23" type="stmt" count="6"/>
+        <line num="24" type="stmt" count="6"/>
+        <line num="25" type="stmt" count="6"/>
+        <line num="26" type="stmt" count="6"/>
+        <line num="27" type="stmt" count="6"/>
+        <line num="28" type="stmt" count="1"/>
+        <line num="34" type="stmt" count="5"/>
+        <metrics loc="36" ncloc="31" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/File/ImageSizeMax.php">
+        <class name="kalanis\kw_rules\Rules\File\ImageSizeMax" namespace="kalanis\kw_rules\Rules\File" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="9" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+        </class>
+        <line num="21" type="method" name="validate" visibility="public" complexity="7" crap="7" count="6"/>
+        <line num="23" type="stmt" count="6"/>
+        <line num="24" type="stmt" count="6"/>
+        <line num="25" type="stmt" count="6"/>
+        <line num="26" type="stmt" count="6"/>
+        <line num="28" type="stmt" count="6"/>
+        <line num="29" type="stmt" count="6"/>
+        <line num="31" type="stmt" count="3"/>
+        <line num="36" type="stmt" count="3"/>
+        <line num="39" type="method" name="checkValue" visibility="protected" complexity="2" crap="2" count="7"/>
+        <line num="41" type="stmt" count="7"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="6"/>
+        <metrics loc="46" ncloc="40" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/File/ImageSizeMin.php">
+        <class name="kalanis\kw_rules\Rules\File\ImageSizeMin" namespace="kalanis\kw_rules\Rules\File" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="9" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+        </class>
+        <line num="21" type="method" name="validate" visibility="public" complexity="7" crap="7" count="6"/>
+        <line num="23" type="stmt" count="6"/>
+        <line num="24" type="stmt" count="6"/>
+        <line num="25" type="stmt" count="6"/>
+        <line num="26" type="stmt" count="6"/>
+        <line num="28" type="stmt" count="6"/>
+        <line num="29" type="stmt" count="6"/>
+        <line num="31" type="stmt" count="3"/>
+        <line num="36" type="stmt" count="3"/>
+        <line num="39" type="method" name="checkValue" visibility="protected" complexity="2" crap="2" count="7"/>
+        <line num="41" type="stmt" count="7"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="44" type="stmt" count="6"/>
+        <metrics loc="46" ncloc="40" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+      </file>
+    </package>
+    <package name="kalanis\kw_rules\Rules\Safe">
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/Safe/HashedBasicEquals.php">
+        <class name="kalanis\kw_rules\Rules\Safe\HashedBasicEquals" namespace="kalanis\kw_rules\Rules\Safe" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+        </class>
+        <line num="18" type="method" name="validate" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="25" type="method" name="hash" visibility="protected" complexity="1" crap="1" count="2"/>
+        <line num="27" type="stmt" count="2"/>
+        <metrics loc="29" ncloc="24" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/Safe/HashedFuncEquals.php">
+        <class name="kalanis\kw_rules\Rules\Safe\HashedFuncEquals" namespace="kalanis\kw_rules\Rules\Safe" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        </class>
+        <line num="18" type="method" name="validate" visibility="public" complexity="2" crap="2" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <metrics loc="24" ncloc="19" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Rules/Safe/HashedPassEquals.php">
+        <class name="kalanis\kw_rules\Rules\Safe\HashedPassEquals" namespace="kalanis\kw_rules\Rules\Safe" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="2" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="25" ncloc="19" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <package name="kalanis\kw_rules">
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/SubRules.php">
+        <class name="kalanis\kw_rules\SubRules" namespace="kalanis\kw_rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+        </class>
+        <line num="16" type="method" name="whichFactory" visibility="protected" complexity="1" crap="1" count="1"/>
+        <line num="18" type="stmt" count="1"/>
+        <metrics loc="20" ncloc="14" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/TRules.php">
+        <class name="TRules" namespace="kalanis\kw_rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="11" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="23" coveredelements="23"/>
+        </class>
+        <line num="27" type="method" name="addRule" visibility="public" complexity="2" crap="2" count="7"/>
+        <line num="29" type="stmt" count="7"/>
+        <line num="30" type="stmt" count="7"/>
+        <line num="31" type="stmt" count="7"/>
+        <line num="32" type="stmt" count="7"/>
+        <line num="33" type="stmt" count="7"/>
+        <line num="34" type="stmt" count="7"/>
+        <line num="39" type="method" name="addRules" visibility="public" complexity="4" crap="4" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="1"/>
+        <line num="45" type="stmt" count="2"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="49" type="stmt" count="2"/>
+        <line num="54" type="method" name="getRules" visibility="public" complexity="1" crap="1" count="7"/>
+        <line num="56" type="stmt" count="7"/>
+        <line num="59" type="method" name="removeRules" visibility="public" complexity="1" crap="1" count="2"/>
+        <line num="61" type="stmt" count="2"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="64" type="method" name="setFactory" visibility="protected" complexity="2" crap="2" count="7"/>
+        <line num="67" type="stmt" count="7"/>
+        <line num="68" type="stmt" count="7"/>
+        <line num="70" type="stmt" count="7"/>
+        <metrics loc="77" ncloc="53" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="23" coveredelements="23"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/TValidate.php">
+        <class name="TValidate" namespace="kalanis\kw_rules" fullPackage="kalanis" package="kalanis">
+          <metrics complexity="6" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+        </class>
+        <line num="20" type="method" name="validate" visibility="public" complexity="5" crap="5" count="5"/>
+        <line num="22" type="stmt" count="5"/>
+        <line num="23" type="stmt" count="5"/>
+        <line num="25" type="stmt" count="5"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="31" type="stmt" count="3"/>
+        <line num="32" type="stmt" count="1"/>
+        <line num="36" type="stmt" count="5"/>
+        <line num="42" type="method" name="getErrors" visibility="public" complexity="1" crap="1" count="5"/>
+        <line num="44" type="stmt" count="5"/>
+        <metrics loc="46" ncloc="35" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="11" elements="13" coveredelements="13"/>
+      </file>
+      <file name="/usr/share/nginx/deep_tree/kw_rules/php-src/Validate.php">
+        <class name="kalanis\kw_rules\Validate" namespace="kalanis\kw_rules">
+          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="9" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+    </package>
+    <metrics files="71" loc="2299" ncloc="1708" classes="56" methods="77" coveredmethods="77" conditionals="0" coveredconditionals="0" statements="298" coveredstatements="298" elements="375" coveredelements="375"/>
+  </project>
+</coverage>

@@ -1,0 +1,14 @@
+{
+  "author": "kalanis",
+  "name": "kw_pager",
+  "description": "Shareable pager - basic interfaces",
+  "source": "https://github.com/alex-kalanis/pager",
+  "license": "BSD-3-Clause",
+  "require": {
+    "php": ">=7.2.0"
+  },
+  "require-dev": {
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

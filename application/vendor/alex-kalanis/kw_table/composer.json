@@ -1,0 +1,59 @@
+{
+    "name": "alex-kalanis/kw_table",
+    "description": "Table engine for KWCMS",
+    "keywords": [
+        "filtering",
+        "sorting",
+        "tables",
+        "table"
+    ],
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "require": {
+        "alex-kalanis/kw_address_handler": ">=2.0",
+        "alex-kalanis/kw_connect": ">=3.2",
+        "alex-kalanis/kw_forms": ">=2.0",
+        "alex-kalanis/kw_input": ">=2.0",
+        "alex-kalanis/kw_paging": ">=1.0",
+        "ext-mbstring": "*",
+        "php": ">=7.2.0"
+    },
+    "require-dev": {
+        "ext-json": "*",
+        "alex-kalanis/kw_clipr": ">=1.0",
+        "latte/latte": ">=2.0",
+        "twig/twig": "~3.4",
+        "jenssegers/blade": "~1.4",
+        "nette/forms": "~3.1",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "phpstan/phpstan": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": ">=7.2"
+    },
+    "suggest": {
+        "alex-kalanis/kw_mapper": "Mapper for accessing resources in KWCMS",
+        "alex-kalanis/kw_clipr": "CLI Processor"
+    },
+    "autoload": {
+        "psr-4": {
+            "kalanis\\kw_table\\form_kw\\": "php-src/form_kw/",
+            "kalanis\\kw_table\\form_nette\\": "php-src/form_nette/",
+            "kalanis\\kw_table\\form_nette_bootstrap\\": "php-src/form_nette_bootstrap/",
+            "kalanis\\kw_table\\form_nette_lte\\": "php-src/form_nette_lte/",
+            "kalanis\\kw_table\\kw\\": "php-src/kw/",
+            "kalanis\\kw_table\\nette\\": "php-src/nette/",
+            "kalanis\\kw_table\\output_cli\\": "php-src/output_cli/",
+            "kalanis\\kw_table\\output_direct\\": "php-src/output_direct/php-src/",
+            "kalanis\\kw_table\\output_json\\": "php-src/output_json/",
+            "kalanis\\kw_table\\output_kw\\": "php-src/output_kw/php-src/",
+            "kalanis\\kw_table\\output_latte\\": "php-src/output_latte/php-src/",
+            "kalanis\\kw_table\\output_blade\\": "php-src/output_blade/php-src/",
+            "kalanis\\kw_table\\output_twig\\": "php-src/output_twig/php-src/",
+            "kalanis\\kw_table\\core\\": "php-src/core/"
+        }
+    },
+    "scripts": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

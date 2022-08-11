@@ -1,0 +1,38 @@
+{
+    "name": "alex-kalanis/kw_clipr",
+    "description": "CLI Processor",
+    "keywords": [
+        "scripts",
+        "tasks",
+        "cli"
+    ],
+    "license": "BSD-3-Clause",
+    "type": "library",
+    "require": {
+        "ext-mbstring": "*",
+        "alex-kalanis/kw_input": ">=2.0",
+        "alex-kalanis/kw_locks": ">=2.0",
+        "php": ">=7.2.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "psr/container": "=2.0.2",
+        "phpunit/phpunit": ">=7.2",
+        "php": ">=7.4.0"
+    },
+    "suggest": {
+        "alex-kalanis/kw_locks": "Locks in KWCMS",
+        "psr/container": "PSR-11 - DI support - API"
+    },
+    "autoload": {
+        "psr-4": {
+            "kalanis\\kw_clipr\\": "php-src/"
+        }
+    },
+    "scripts": {
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

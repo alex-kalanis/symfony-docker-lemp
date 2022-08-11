@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ page_title }}{% endblock %}
+        
+{% block body %}
+    <h1 class="text-center">{{ page_title }}</h1>
+    <div class="container">
+        {{ form.renderStart|raw }}
+        {{ form.getControl('firstName').renderLabel|raw }} {{ form.getControl('firstName').renderInput|raw }} {{ form.renderControlErrors('firstName')|raw }}<br />
+        {{ form.getControl('lastName').renderLabel|raw }} {{ form.getControl('lastName').renderInput|raw }} {{ form.renderControlErrors('lastName')|raw }}<br />
+        {{ form.getControl('phone').renderLabel|raw }} {{ form.getControl('phone').renderInput|raw }} {{ form.renderControlErrors('phone')|raw }}<br />
+        {{ form.getControl('email').renderLabel|raw }} {{ form.getControl('email').renderInput|raw }} {{ form.renderControlErrors('email')|raw }}<br />
+        {{ form.getControl('note').renderLabel|raw }} {{ form.getControl('note').renderInput|raw }} {{ form.renderControlErrors('note')|raw }}<br />
+        {{ form.getControl('submit').renderInput|raw }} {{ form.renderControlErrors('submit')|raw }}<br />
+        {{ form.renderEnd|raw }}
+    </div>
+{% endblock %}

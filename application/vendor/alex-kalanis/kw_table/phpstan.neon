@@ -1,0 +1,26 @@
+parameters:
+	level: 6
+	paths:
+		- 'php-src/core'
+		- 'php-src/form_kw'
+		- 'php-src/kw'
+		- 'php-src/output_cli'
+		- 'php-src/output_direct/php-src'
+		- 'php-src/output_json'
+		- 'php-src/output_kw/php-src'
+	scanFiles:
+		- 'php-tests/CommonTestClass.php'
+#	scanDirectories:
+#		- 'php-tests/discard'
+	excludePaths:
+		- 'php-tests/_autoload.php'
+		- 'php-tests/_bootstrap.php'
+		- 'php-tests/CommonTestClass.php'
+	bootstrapFiles:
+		- 'php-tests/_bootstrap.php'
+	checkGenericClassInNonGenericObjectType: false
+#	ignoreErrors:
+#		-
+#			message: '#Call to an undefined method kalanis\\kw_templates\\Interfaces\\IHtmlElement\:\:getKey\(\)#'
+#			path: 'php-src/Controls/Radio.php'
+#			# quality WTF - already covered in that "instaceof" check
