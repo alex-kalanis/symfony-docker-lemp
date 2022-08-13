@@ -13,6 +13,7 @@ use kalanis\kw_mapper\Search\Search;
 /**
  * Class Listing
  * @package App\Tasks
+ * @property int|null $page
  * @property string|null $order
  * @property string|null $direction
  */
@@ -21,6 +22,7 @@ class Listing extends ATask
     public function startup(): void
     {
         parent::startup();
+        $this->params->addParam('page', 'page', '(\d+)', null, null, 'Table page');
         $this->params->addParam('order', 'order', null, null, null, 'Order by');
         $this->params->addParam('direction', 'direction', null, null, null, 'Direction');
     }
@@ -35,7 +37,7 @@ class Listing extends ATask
         $search = new Search(new AddressRecord());
         $search->null('deleted');
         $table = new AddressTable($this->inputs);
-        $table->composeCli($search);
+        $table->composeCli($search, is_null($this->page) ? null : intval($this->page));
         $this->tableOrdering($table);
         $this->writeLn($table);
     }

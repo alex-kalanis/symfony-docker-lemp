@@ -19,7 +19,7 @@ trait TMethod
      */
     public function setMethod(string $param): void
     {
-        if (in_array($param, [IEntry::SOURCE_GET, IEntry::SOURCE_POST])) {
+        if (in_array($param, [IEntry::SOURCE_GET, IEntry::SOURCE_POST, IEntry::SOURCE_CLI])) {
             $this->setAttribute('method', $param);
         }
     }

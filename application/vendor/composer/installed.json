@@ -163,17 +163,17 @@
         },
         {
             "name": "alex-kalanis/kw_forms",
-            "version": "v2.3.2",
-            "version_normalized": "2.3.2.0",
+            "version": "v2.3.3",
+            "version_normalized": "2.3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alex-kalanis/kw_forms.git",
-                "reference": "2d384f8456a2b98b56f34b388da47bac6514fbcb"
+                "reference": "874b96e1ed69ac09ac2b7af2eb64af90904a06ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alex-kalanis/kw_forms/zipball/2d384f8456a2b98b56f34b388da47bac6514fbcb",
-                "reference": "2d384f8456a2b98b56f34b388da47bac6514fbcb",
+                "url": "https://api.github.com/repos/alex-kalanis/kw_forms/zipball/874b96e1ed69ac09ac2b7af2eb64af90904a06ab",
+                "reference": "874b96e1ed69ac09ac2b7af2eb64af90904a06ab",
                 "shasum": ""
             },
             "require": {
@@ -197,7 +197,7 @@
             "suggest": {
                 "firebase/php-jwt": "PHP package for JWT"
             },
-            "time": "2022-08-13T04:39:34+00:00",
+            "time": "2022-08-13T14:48:16+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -217,7 +217,7 @@
             ],
             "support": {
                 "issues": "https://github.com/alex-kalanis/kw_forms/issues",
-                "source": "https://github.com/alex-kalanis/kw_forms/tree/v2.3.2"
+                "source": "https://github.com/alex-kalanis/kw_forms/tree/v2.3.3"
             },
             "install-path": "../alex-kalanis/kw_forms"
         },
@@ -629,17 +629,17 @@
         },
         {
             "name": "alex-kalanis/kw_table",
-            "version": "v1.2.0",
-            "version_normalized": "1.2.0.0",
+            "version": "v1.2.1",
+            "version_normalized": "1.2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alex-kalanis/kw_table.git",
-                "reference": "582caca21b8e742217b8a8b08d79154ead1ada03"
+                "reference": "f1fcd8b3b7d51ce2b7b25c39ac900314000c134c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alex-kalanis/kw_table/zipball/582caca21b8e742217b8a8b08d79154ead1ada03",
-                "reference": "582caca21b8e742217b8a8b08d79154ead1ada03",
+                "url": "https://api.github.com/repos/alex-kalanis/kw_table/zipball/f1fcd8b3b7d51ce2b7b25c39ac900314000c134c",
+                "reference": "f1fcd8b3b7d51ce2b7b25c39ac900314000c134c",
                 "shasum": ""
             },
             "require": {
@@ -667,7 +667,7 @@
                 "alex-kalanis/kw_clipr": "CLI Processor",
                 "alex-kalanis/kw_mapper": "Mapper for accessing resources in KWCMS"
             },
-            "time": "2022-08-13T05:30:21+00:00",
+            "time": "2022-08-13T15:24:44+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -701,7 +701,7 @@
             ],
             "support": {
                 "issues": "https://github.com/alex-kalanis/kw_table/issues",
-                "source": "https://github.com/alex-kalanis/kw_table/tree/v1.2.0"
+                "source": "https://github.com/alex-kalanis/kw_table/tree/v1.2.1"
             },
             "install-path": "../alex-kalanis/kw_table"
         },

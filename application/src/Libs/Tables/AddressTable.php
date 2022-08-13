@@ -93,12 +93,15 @@ class AddressTable
 
     /**
      * @param Search $search
+     * @param int|null $page
      * @throws FormsException
      * @throws TableException
      */
-    public function composeCli(Search $search): void
+    public function composeCli(Search $search, ?int $page = null): void
     {
-        $this->fillKwCli($this->variables);
+        $helper = new \kalanis\kw_table\kw\Helper();
+        $helper->fillKwCli($this->variables, $page);
+        $this->table = $helper->getTable();
 
         // columns
         $this->table->addOrderedColumn('ID', new Columns\Basic('id'), new KwField\TextExact());
@@ -113,32 +116,6 @@ class AddressTable
 
         // records per page
         $this->table->getPager()->getPager()->setLimit(10);
-    }
-
-    protected function fillKwCli(InputInterface\IFiltered $inputs, string $alias = 'filter'): void
-    {
-        $this->table = new Table();
-
-        // filter form
-        $inputVariables = new InputVarsAdapter($inputs);
-        $inputFiles = new Adapters\InputFilesAdapter($inputs);
-        $form = new Form($alias);
-        $form->setMethod(InputInterface\IEntry::SOURCE_CLI); // set Cli as input
-        $this->table->addHeaderFilter(new KwFilter($form));
-        $form->setInputs($inputVariables, $inputFiles);
-
-        // order links
-        $this->table->addOrder(new Order(new Handler(new Sources\Inputs($inputs))));
-
-        // pager
-        $pager = new BasicPager();
-        $pageLink = new PageLink(new Handler(new Sources\Inputs($inputs)), $pager);
-        $pager->setActualPage($pageLink->getPageNumber());
-        $this->table->addPager(new Render\CliPager(new Positions($pager)));
-
-        // output
-        $this->table->setOutput(new CliRenderer($this->table));
-
     }
 
     public function idLink($id): string

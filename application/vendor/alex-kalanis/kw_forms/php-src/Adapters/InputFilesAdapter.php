@@ -11,7 +11,6 @@ use kalanis\kw_input\Interfaces\IFiltered;
 /**
  * Class InputFilesAdapter
  * @package kalanis\kw_forms\Adapters
- * @codeCoverageIgnore accessing remote libraries
  */
 class InputFilesAdapter extends FilesAdapter
 {

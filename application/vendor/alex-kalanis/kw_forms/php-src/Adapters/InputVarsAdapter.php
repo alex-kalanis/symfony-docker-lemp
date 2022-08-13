@@ -11,7 +11,6 @@ use kalanis\kw_input\Interfaces\IFiltered;
 /**
  * Class InputVarsAdapter
  * @package kalanis\kw_forms\Adapters
- * @codeCoverageIgnore accessing remote libraries
  */
 class InputVarsAdapter extends VarsAdapter
 {
@@ -29,6 +28,8 @@ class InputVarsAdapter extends VarsAdapter
             $this->vars = $this->inputs->getInArray(null, [IEntry::SOURCE_POST]);
         } elseif (IEntry::SOURCE_GET == $inputType) {
             $this->vars = $this->inputs->getInArray(null, [IEntry::SOURCE_GET]);
+        } elseif (IEntry::SOURCE_CLI == $inputType) {
+            $this->vars = $this->inputs->getInArray(null, [IEntry::SOURCE_CLI]);
         } else {
             throw new FormsException(sprintf('Unknown input type - %s', $inputType));
         }

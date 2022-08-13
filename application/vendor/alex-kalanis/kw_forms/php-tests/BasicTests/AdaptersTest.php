@@ -6,6 +6,7 @@ namespace BasicTests;
 use CommonTestClass;
 use kalanis\kw_forms\Adapters;
 use kalanis\kw_forms\Exceptions\FormsException;
+use kalanis\kw_input\Filtered\SimpleArrays;
 use kalanis\kw_input\Interfaces\IEntry;
 
 
@@ -105,11 +106,82 @@ class AdaptersTest extends CommonTestClass
     /**
      * @throws FormsException
      */
-    public function testAdapterDie(): void
+    public function testVarsAdapterDie(): void
     {
         $adapter = new Adapters\VarsAdapter();
         $this->expectException(FormsException::class);
         $adapter->loadEntries('unknown_one');
+    }
+
+    /**
+     * Because it's necessary to test constructor
+     * @throws FormsException
+     */
+    public function testInputVarsAdapter(): void
+    {
+        $this->testAdapter(
+            new Adapters\InputVarsAdapter(new SimpleArrays([
+                'foo' => 'aff',
+                'bar' => 'poa',
+                'baz' => 'cdd',
+                'sgg' => 'arr',
+                'sd#,\'srs' => 'ggsd<$=',
+                'dsr.!>sd' => 'zfd?-"',
+                'dg-[]' => 'dc^&#~\\€`~°',
+                'dg[]' => '<?php =!@#dc^&#~',
+                'xggxgx' => 'free',
+            ])),
+            IEntry::SOURCE_CLI,
+            true,
+            true,
+            true,
+            true
+        );
+    }
+
+    /**
+     * @throws FormsException
+     */
+    public function testInputVarsAdapterPassInputs(): void
+    {
+        $adapter = new Adapters\InputVarsAdapter(new SimpleArrays([
+            'foo' => 'aff',
+        ], IEntry::SOURCE_CLI));
+        // input type there does not matter, because simple arrays have no information about source - there is no source
+        $adapter->loadEntries(IEntry::SOURCE_CLI);
+        $this->assertEquals(1, $adapter->count());
+        $adapter->loadEntries(IEntry::SOURCE_GET);
+        $this->assertEquals(1, $adapter->count());
+        $adapter->loadEntries(IEntry::SOURCE_POST);
+        $this->assertEquals(1, $adapter->count());
+    }
+
+    /**
+     * @throws FormsException
+     */
+    public function testInputVarsAdapterDieBadInput(): void
+    {
+        $adapter = new Adapters\InputVarsAdapter(new SimpleArrays([
+            'foo' => 'aff',
+        ]));
+        // session is not available as data source
+        $this->expectException(FormsException::class);
+        $adapter->loadEntries(IEntry::SOURCE_SESSION);
+    }
+
+    /**
+     * @throws FormsException
+     */
+    public function testInputVarsAdapterDieOutOfRange(): void
+    {
+        $adapter = new Adapters\InputVarsAdapter(new SimpleArrays([
+            'foo' => 'aff',
+        ]));
+        $adapter->rewind();
+        $adapter->next();
+
+        $this->expectException(FormsException::class);
+        $adapter->current();
     }
 
     /**
@@ -134,5 +206,25 @@ class AdaptersTest extends CommonTestClass
         $adapter->next();
         $this->expectException(FormsException::class);
         $adapter->getValue(); // not exists
+    }
+
+    /**
+     * @throws FormsException
+     */
+    public function testInputFilesAdapterProcess(): void
+    {
+        $adapter = new Adapters\InputFilesAdapter(new SimpleArrays([
+            'foo' => 'aff',
+        ], IEntry::SOURCE_FILES));
+        // input type there does not matter, because simple arrays have no information about source - there is no source
+        $adapter->loadEntries(IEntry::SOURCE_CLI);
+        $this->assertEquals(1, $adapter->count());
+
+        $adapter->rewind();
+        $adapter->current();
+        $adapter->next();
+
+        $this->expectException(FormsException::class);
+        $adapter->current();
     }
 }
