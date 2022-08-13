@@ -6,7 +6,7 @@ namespace kalanis\kw_clipr\Tasks;
 use kalanis\kw_clipr\Interfaces\ILoader;
 use kalanis\kw_clipr\Interfaces\ISources;
 use kalanis\kw_clipr\Output;
-use kalanis\kw_input\Interfaces\IEntry;
+use kalanis\kw_input\Interfaces\IFiltered;
 
 
 /**
@@ -31,20 +31,21 @@ abstract class ATask
     protected $translator = null;
     /** @var Params */
     protected $params = null;
-    /** @var array<string, IEntry> */
-    protected $inputs = [];
+    /** @var IFiltered */
+    protected $inputs = null;
 
     /**
      * @param Output\AOutput $translator
-     * @param array<string, IEntry> $inputs
+     * @param IFiltered $inputs
      * @param ILoader|null $loader
      */
-    public final function initTask(Output\AOutput $translator, array $inputs, ?ILoader $loader): void
+    public final function initTask(Output\AOutput $translator, IFiltered $inputs, ?ILoader $loader): void
     {
         $this->loader = $loader;
         $this->translator = $translator;
-        $this->params = new Params($inputs);
-        $this->inputs = & $inputs;
+        $inputArray = $inputs->getInArray();
+        $this->params = new Params($inputArray);
+        $this->inputs = $inputs;
         $this->startup();
     }
 

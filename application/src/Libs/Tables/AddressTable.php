@@ -5,15 +5,28 @@ namespace App\Libs\Tables;
 
 use App\Libs\Link;
 use kalanis\kw_address_handler\Forward;
+use kalanis\kw_address_handler\Handler;
+use kalanis\kw_address_handler\Sources;
 use kalanis\kw_connect\core\ConnectException;
+use kalanis\kw_forms\Adapters;
 use kalanis\kw_forms\Exceptions\FormsException;
-use kalanis\kw_input\Interfaces\IVariables;
+use kalanis\kw_forms\Form;
+use kalanis\kw_input\Interfaces\IFiltered;
+use kalanis\kw_input\Interfaces as InputInterface;
+use kalanis\kw_mapper\Interfaces\IQueryBuilder;
 use kalanis\kw_mapper\Search\Search;
+use kalanis\kw_pager\BasicPager;
+use kalanis\kw_paging\Positions;
+use kalanis\kw_paging\Render;
+use kalanis\kw_table\core\Connector\PageLink;
 use kalanis\kw_table\core\Table;
+use kalanis\kw_table\core\Table\Order;
 use kalanis\kw_table\core\TableException;
 use kalanis\kw_table\core\Table\Columns;
 use kalanis\kw_table\core\Table\Rules;
 use kalanis\kw_table\form_kw\Fields as KwField;
+use kalanis\kw_table\form_kw\KwFilter;
+use kalanis\kw_table\output_cli\CliRenderer;
 
 
 /**
@@ -23,7 +36,7 @@ use kalanis\kw_table\form_kw\Fields as KwField;
  */
 class AddressTable
 {
-    /** @var IVariables */
+    /** @var IFiltered */
     protected $variables = null;
     /** @var Table */
     protected $table = null;
@@ -33,9 +46,9 @@ class AddressTable
     protected $link = null;
 
     /**
-     * @param IVariables $inputs
+     * @param IFiltered $inputs
      */
-    public function __construct(IVariables $inputs)
+    public function __construct(IFiltered $inputs)
     {
         $this->variables = $inputs;
         $this->forward = new Forward();
@@ -71,7 +84,7 @@ class AddressTable
         $this->table->addColumn('Actions', $columnActions);
 
         // sorting and connecting datasource
-        $this->table->addOrdering('id',\kalanis\kw_mapper\Interfaces\IQueryBuilder::ORDER_DESC);
+        $this->table->addOrdering('id',IQueryBuilder::ORDER_DESC);
         $this->table->addDataSetConnector(new \kalanis\kw_connect\search\Connector($search));
 
         // records per page
@@ -85,9 +98,7 @@ class AddressTable
      */
     public function composeCli(Search $search): void
     {
-        $helper = new \kalanis\kw_table\kw\Helper();
-        $helper->fillKwCli($this->variables);
-        $this->table = $helper->getTable();
+        $this->fillKwCli($this->variables);
 
         // columns
         $this->table->addOrderedColumn('ID', new Columns\Basic('id'), new KwField\TextExact());
@@ -97,11 +108,37 @@ class AddressTable
         $this->table->addOrderedColumn('Email', new Columns\Basic('email'), new KwField\TextContains());
 
         // sorting and connecting datasource
-        $this->table->addOrdering('id',\kalanis\kw_mapper\Interfaces\IQueryBuilder::ORDER_DESC);
+        $this->table->addOrdering('id',IQueryBuilder::ORDER_DESC);
         $this->table->addDataSetConnector(new \kalanis\kw_connect\search\Connector($search));
 
         // records per page
         $this->table->getPager()->getPager()->setLimit(10);
+    }
+
+    protected function fillKwCli(InputInterface\IFiltered $inputs, string $alias = 'filter'): void
+    {
+        $this->table = new Table();
+
+        // filter form
+        $inputVariables = new InputVarsAdapter($inputs);
+        $inputFiles = new Adapters\InputFilesAdapter($inputs);
+        $form = new Form($alias);
+        $form->setMethod(InputInterface\IEntry::SOURCE_CLI); // set Cli as input
+        $this->table->addHeaderFilter(new KwFilter($form));
+        $form->setInputs($inputVariables, $inputFiles);
+
+        // order links
+        $this->table->addOrder(new Order(new Handler(new Sources\Inputs($inputs))));
+
+        // pager
+        $pager = new BasicPager();
+        $pageLink = new PageLink(new Handler(new Sources\Inputs($inputs)), $pager);
+        $pager->setActualPage($pageLink->getPageNumber());
+        $this->table->addPager(new Render\CliPager(new Positions($pager)));
+
+        // output
+        $this->table->setOutput(new CliRenderer($this->table));
+
     }
 
     public function idLink($id): string

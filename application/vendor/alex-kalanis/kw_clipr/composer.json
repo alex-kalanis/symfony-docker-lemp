@@ -10,7 +10,7 @@
     "type": "library",
     "require": {
         "ext-mbstring": "*",
-        "alex-kalanis/kw_input": ">=2.0",
+        "alex-kalanis/kw_input": ">=2.3",
         "alex-kalanis/kw_locks": ">=2.0",
         "php": ">=7.2.0"
     },

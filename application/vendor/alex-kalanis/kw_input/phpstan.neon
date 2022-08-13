@@ -15,6 +15,6 @@ parameters:
 	bootstrapFiles:
 		- 'php-tests/_autoload.php'
 	checkGenericClassInNonGenericObjectType: false
-#	ignoreErrors:
-#		# solved by unit tests
-#		- '#Cannot call method [a-zA-Z0-9\\_]+\(\) on kalanis\\kw_storage\\Storage#'
+	ignoreErrors:
+		# solved by unit tests
+		- '#Argument of an invalid type ArrayAccess supplied for foreach, only iterables are supported.#'

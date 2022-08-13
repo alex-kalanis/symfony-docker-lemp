@@ -55,7 +55,7 @@ your needs.
 ```
 {
     "require": {
-        "alex-kalanis/kw_clipr": ">=3.0"
+        "alex-kalanis/kw_clipr": ">=3.2"
     }
 }
 ```

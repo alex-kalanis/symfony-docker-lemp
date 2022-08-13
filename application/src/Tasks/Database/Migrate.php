@@ -3,9 +3,6 @@
 namespace App\Tasks\Database;
 
 
-use App\Libs\APhinx;
-
-
 /**
  * Class Migrate
  * @package App\Tasks\Database

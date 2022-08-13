@@ -8,6 +8,7 @@ use kalanis\kw_clipr\CliprException;
 use kalanis\kw_clipr\Output;
 use kalanis\kw_clipr\Tasks\ASingleTask;
 use kalanis\kw_clipr\Loaders\KwLoader;
+use kalanis\kw_input\Filtered\EntryArrays;
 use kalanis\kw_locks\Interfaces\ILock;
 use kalanis\kw_locks\Interfaces\IPassedKey;
 use kalanis\kw_locks\LockException;
@@ -47,7 +48,7 @@ class SingleTest extends CommonTestClass
         $lock = new XLock();
         $lock->delete();
         $lib = new XSingle($lock);
-        $lib->initTask(new Output\Clear(), $this->getParams(), new KwLoader());
+        $lib->initTask(new Output\Clear(), new EntryArrays($this->getParams()), new KwLoader());
         $this->assertNotEmpty($lib);
     }
 
@@ -59,12 +60,12 @@ class SingleTest extends CommonTestClass
         $lock = new XLock();
         // first run
         $lib1 = new XSingle($lock);
-        $lib1->initTask(new Output\Clear(), $this->getParams(), new KwLoader());
+        $lib1->initTask(new Output\Clear(), new EntryArrays($this->getParams()), new KwLoader());
 
         // second run
         $lib2 = new XSingle($lock);
         $this->expectException(CliprException::class);
-        $lib2->initTask(new Output\Clear(), $this->getParams(), new KwLoader());
+        $lib2->initTask(new Output\Clear(), new EntryArrays($this->getParams()), new KwLoader());
     }
 
     /**
@@ -74,7 +75,7 @@ class SingleTest extends CommonTestClass
     {
         $lock = new XCLock();
         $lib = new XSingle($lock);
-        $lib->initTask(new Output\Clear(), $this->getParams(), new KwLoader());
+        $lib->initTask(new Output\Clear(), new EntryArrays($this->getParams()), new KwLoader());
         $this->assertNotEmpty($lib);
     }
 
@@ -86,7 +87,7 @@ class SingleTest extends CommonTestClass
         $lock = new XDLock();
         $lib = new XSingle($lock);
         $this->expectException(CliprException::class); // fail with locks - cannot create and delete
-        $lib->initTask(new Output\Clear(), $this->getParams(), new KwLoader());
+        $lib->initTask(new Output\Clear(), new EntryArrays($this->getParams()), new KwLoader());
     }
 
     protected function getParams(): array

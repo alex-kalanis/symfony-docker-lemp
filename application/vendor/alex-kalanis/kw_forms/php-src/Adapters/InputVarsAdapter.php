@@ -5,7 +5,7 @@ namespace kalanis\kw_forms\Adapters;
 
 use kalanis\kw_forms\Exceptions\FormsException;
 use kalanis\kw_input\Interfaces\IEntry;
-use kalanis\kw_input\Interfaces\IVariables;
+use kalanis\kw_input\Interfaces\IFiltered;
 
 
 /**
@@ -15,10 +15,10 @@ use kalanis\kw_input\Interfaces\IVariables;
  */
 class InputVarsAdapter extends VarsAdapter
 {
-    /** @var IVariables */
+    /** @var IFiltered */
     protected $inputs = null;
 
-    public function __construct(IVariables $inputs)
+    public function __construct(IFiltered $inputs)
     {
         $this->inputs = $inputs;
     }

@@ -7,6 +7,7 @@ use CommonTestClass;
 use kalanis\kw_clipr\Output;
 use kalanis\kw_clipr\Tasks\DummyTask;
 use kalanis\kw_clipr\Loaders\KwLoader;
+use kalanis\kw_input\Filtered\SimpleArrays;
 
 
 class TaskTest extends CommonTestClass
@@ -15,7 +16,7 @@ class TaskTest extends CommonTestClass
     {
         $inputs = $this->getParams();
         $instance = new XDummy();
-        $instance->initTask(new Output\Web(), $inputs, new KwLoader());
+        $instance->initTask(new Output\Web(), new SimpleArrays($inputs), new KwLoader());
         $this->assertEquals('Just dummy task for processing info from params', $instance->desc());
         $instance->process();
         $this->assertInstanceOf('\kalanis\kw_clipr\Output\AOutput', $instance->transl());

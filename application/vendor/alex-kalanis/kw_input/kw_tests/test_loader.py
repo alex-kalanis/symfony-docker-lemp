@@ -74,12 +74,14 @@ class LoaderTest(CommonTestClass):
 
     def test_cli_file(self):
         import os
+        # import pprint
         data = CliEntry()
         data.set_basic_path(os.getcwd() + os.sep.join(('', '..', 'php-tests')))  # to php data files
 
         assert isinstance(data, ALoader)
 
         entries = data.load_vars(IEntry.SOURCE_CLI, Cli().parse_input(self.cli_dataset()))
+        # pprint.pprint(entries[0].get_value())
 
         assert IEntry.SOURCE_CLI == entries[0].get_source()
         assert 'testing' == entries[0].get_key()

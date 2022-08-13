@@ -32,7 +32,7 @@ abstract class ASingleTask extends ATask
         } elseif (method_exists($this->lock, 'setClass')) {
             $this->lock->/** @scrutinizer ignore-call */setClass($this);
         }
-        // temp dir path must go via lock's constructor
+        // lock target must go via lock's constructor
         // when it comes via IStorage (StorageLock), it's possible to connect it into Redis or Memcache and then that path might not be necessary
     }
 
@@ -67,7 +67,7 @@ abstract class ASingleTask extends ATask
     protected function checkSingleInstance(): void
     {
         try {
-            if ($this->isSingleInstance() && $this->isFileLocked()) {
+            if ($this->isSingleInstance() && $this->isRunLocked()) {
                 // check if exists another instance
                 throw new SingleTaskException('One script instance is already running!');
                 // create own lock file
@@ -86,7 +86,7 @@ abstract class ASingleTask extends ATask
      * @throws LockException
      * @return bool
      */
-    protected function isFileLocked(): bool
+    protected function isRunLocked(): bool
     {
         try {
             if (!$this->lock->has()) {

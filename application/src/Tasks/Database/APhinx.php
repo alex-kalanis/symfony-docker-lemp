@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Libs;
+namespace App\Tasks\Database;
 
 
 use kalanis\kw_clipr\Support\Posix\Command;
@@ -17,6 +17,7 @@ abstract class APhinx extends ATask
 {
     /**
      * @var array<string, string>
+     * Must be same as keys in environment in phinx.php
      */
     protected $targets = [
         'dev' => 'development',

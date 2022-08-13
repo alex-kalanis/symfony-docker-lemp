@@ -22,10 +22,10 @@ class CacheLoader implements ILoader
 
     public static function init(ILoader $loader): self
     {
-        return new self($loader);
+        return new static($loader);
     }
 
-    public function __construct(ILoader $loader)
+    final public function __construct(ILoader $loader)
     {
         $this->loader = $loader;
     }

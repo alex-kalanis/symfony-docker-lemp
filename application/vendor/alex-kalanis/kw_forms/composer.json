@@ -13,7 +13,7 @@
     "ext-gd": "*",
     "ext-json": "*",
     "ext-mbstring": "*",
-    "alex-kalanis/kw_input": ">=2.0",
+    "alex-kalanis/kw_input": ">=2.3",
     "alex-kalanis/kw_rules": ">=2.0",
     "alex-kalanis/kw_storage": ">=1.0",
     "alex-kalanis/kw_templates": ">=2.0",

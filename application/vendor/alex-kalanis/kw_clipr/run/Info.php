@@ -20,7 +20,7 @@ class Info extends ATask
 
     public function process(): void
     {
-        $cliprPath = Useful::getNthParam($this->inputs, 0) ?? 'clipr';
+        $cliprPath = Useful::getNthParam($this->inputs->getInArray(), 0) ?? 'clipr';
         $this->writeLn('<yellow><bluebg>+======================+</bluebg></yellow>');
         $this->writeLn('<yellow><bluebg>|       kw_clipr       |</bluebg></yellow>');
         $this->writeLn('<yellow><bluebg>+======================+</bluebg></yellow>');

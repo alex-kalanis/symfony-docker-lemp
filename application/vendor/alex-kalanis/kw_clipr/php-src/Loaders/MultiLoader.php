@@ -21,7 +21,11 @@ class MultiLoader implements ILoader
 
     public static function init(): self
     {
-        return new self();
+        return new static();
+    }
+
+    final public function __construct()
+    {
     }
 
     public function addLoader(ILoader $loader): self

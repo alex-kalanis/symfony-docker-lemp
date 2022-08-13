@@ -27,28 +27,29 @@ class Listing extends ATask
 
     public function desc(): string
     {
-        return 'Listing addresses';
+        return 'Listing addresses from Cli';
     }
 
     public function process(): void
     {
-        $this->writeLn('Nothing now');
-        return;
-
         $search = new Search(new AddressRecord());
-        $search->notNull('deleted');
-        // probably wont be necessary with passing inputs
+        $search->null('deleted');
+        $table = new AddressTable($this->inputs);
+        $table->composeCli($search);
+        $this->tableOrdering($table);
+        $this->writeLn($table);
+    }
+
+    protected function tableOrdering(AddressTable $table): void
+    {
         $availableKeys = $this->parseKeys();
         if (!is_null($this->order) && in_array($this->order, $availableKeys)) {
             $direction = IOrder::ORDER_ASC;
             if (!is_null($this->direction) && in_array(strtoupper($this->direction), [IOrder::ORDER_ASC, IOrder::ORDER_DESC])) {
                 $direction = strtoupper($this->direction);
             }
-            $search->orderBy($this->order, $direction);
+            $table->getTable()->getOrder()->addPrependOrdering($this->order, $direction);
         }
-        // ---
-        $table = new AddressTable($this->inputs);
-        $table->composeCli($search);
     }
 
     protected function parseKeys(): array

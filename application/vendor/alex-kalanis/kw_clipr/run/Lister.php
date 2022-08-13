@@ -14,7 +14,7 @@ use kalanis\kw_clipr\Tasks\ATask;
 /**
  * Class Lister
  * @package clipr
- * @property string path
+ * @property string $path
  */
 class Lister extends ATask
 {

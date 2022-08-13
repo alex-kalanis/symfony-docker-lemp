@@ -95,24 +95,3 @@ class Inputs(IInputs):
             allowed_by_source = (not entry_sources) or (entry.get_source() in entry_sources)
             if allowed_by_key and allowed_by_source:
                 yield entry
-
-
-class Variables(IVariables):
-    """
-     * Helping class for passing info from inputs into objects
-    """
-
-    def __init__(self, inputs: IInputs):
-        self._inputs = inputs
-
-    def get_in_object(self, entry_key: str = None, entry_sources = None):
-        return Input(self.get_in_array(entry_key, entry_sources))
-
-    def get_in_array(self, entry_key: str = None, entry_sources = None):
-        return self._into_key_object_array(self._inputs.get_in(entry_key, entry_sources))
-
-    def _into_key_object_array(self, entries):
-        result = []
-        for entry in entries:
-            result.append((entry.get_key(), entry))
-        return dict(result)

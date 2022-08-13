@@ -11,6 +11,7 @@ use kalanis\kw_input\Interfaces\IEntry;
 /**
  * Class Sources
  * @package kalanis\kw_clipr\Clipr
+ * @todo: idea - split dependency on sourceType - entryTypes and output to extra classes
  */
 class Sources
 {

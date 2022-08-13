@@ -4,27 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c121d73e62bbd77a203514e749ba45f9",
+    "content-hash": "d0988212213207baeb7439e8aa4dd9c4",
     "packages": [
         {
             "name": "alex-kalanis/kw_address_handler",
-            "version": "v2.1.1",
+            "version": "v2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alex-kalanis/kw_address_handler.git",
-                "reference": "d88de79ab34f6b3ce8f8f812524e94c71895e5cd"
+                "reference": "4870c3e1099b883d1069368bf8aa3bbd51f059c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alex-kalanis/kw_address_handler/zipball/d88de79ab34f6b3ce8f8f812524e94c71895e5cd",
-                "reference": "d88de79ab34f6b3ce8f8f812524e94c71895e5cd",
+                "url": "https://api.github.com/repos/alex-kalanis/kw_address_handler/zipball/4870c3e1099b883d1069368bf8aa3bbd51f059c2",
+                "reference": "4870c3e1099b883d1069368bf8aa3bbd51f059c2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.0"
             },
             "require-dev": {
-                "alex-kalanis/kw_input": ">=2.0",
+                "alex-kalanis/kw_input": ">=2.3",
                 "friendsofphp/php-cs-fixer": "^3.0",
                 "phpstan/phpstan": "^1.0",
                 "phpstan/phpstan-phpunit": "^1.0",
@@ -51,26 +51,26 @@
             ],
             "support": {
                 "issues": "https://github.com/alex-kalanis/kw_address_handler/issues",
-                "source": "https://github.com/alex-kalanis/kw_address_handler/tree/v2.1.1"
+                "source": "https://github.com/alex-kalanis/kw_address_handler/tree/v2.1.2"
             },
-            "time": "2022-06-20T02:33:25+00:00"
+            "time": "2022-08-13T04:58:31+00:00"
         },
         {
             "name": "alex-kalanis/kw_clipr",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alex-kalanis/kw_clipr.git",
-                "reference": "df9b144276d0764e7d085d8ba195967d775cab1d"
+                "reference": "85921c9c9ab6451386815179dd278ed66bb086ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alex-kalanis/kw_clipr/zipball/df9b144276d0764e7d085d8ba195967d775cab1d",
-                "reference": "df9b144276d0764e7d085d8ba195967d775cab1d",
+                "url": "https://api.github.com/repos/alex-kalanis/kw_clipr/zipball/85921c9c9ab6451386815179dd278ed66bb086ec",
+                "reference": "85921c9c9ab6451386815179dd278ed66bb086ec",
                 "shasum": ""
             },
             "require": {
-                "alex-kalanis/kw_input": ">=2.0",
+                "alex-kalanis/kw_input": ">=2.3",
                 "alex-kalanis/kw_locks": ">=2.0",
                 "ext-mbstring": "*",
                 "php": ">=7.2.0"
@@ -105,9 +105,9 @@
             ],
             "support": {
                 "issues": "https://github.com/alex-kalanis/kw_clipr/issues",
-                "source": "https://github.com/alex-kalanis/kw_clipr/tree/v3.1.0"
+                "source": "https://github.com/alex-kalanis/kw_clipr/tree/v3.2.0"
             },
-            "time": "2022-06-21T00:55:23+00:00"
+            "time": "2022-08-13T04:34:29+00:00"
         },
         {
             "name": "alex-kalanis/kw_connect",
@@ -160,20 +160,20 @@
         },
         {
             "name": "alex-kalanis/kw_forms",
-            "version": "v2.3.1",
+            "version": "v2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alex-kalanis/kw_forms.git",
-                "reference": "4fab89affb1c73cf167a734ede44ecb57baca3fa"
+                "reference": "2d384f8456a2b98b56f34b388da47bac6514fbcb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alex-kalanis/kw_forms/zipball/4fab89affb1c73cf167a734ede44ecb57baca3fa",
-                "reference": "4fab89affb1c73cf167a734ede44ecb57baca3fa",
+                "url": "https://api.github.com/repos/alex-kalanis/kw_forms/zipball/2d384f8456a2b98b56f34b388da47bac6514fbcb",
+                "reference": "2d384f8456a2b98b56f34b388da47bac6514fbcb",
                 "shasum": ""
             },
             "require": {
-                "alex-kalanis/kw_input": ">=2.0",
+                "alex-kalanis/kw_input": ">=2.3",
                 "alex-kalanis/kw_rules": ">=2.0",
                 "alex-kalanis/kw_storage": ">=1.0",
                 "alex-kalanis/kw_templates": ">=2.0",
@@ -211,22 +211,22 @@
             ],
             "support": {
                 "issues": "https://github.com/alex-kalanis/kw_forms/issues",
-                "source": "https://github.com/alex-kalanis/kw_forms/tree/v2.3.1"
+                "source": "https://github.com/alex-kalanis/kw_forms/tree/v2.3.2"
             },
-            "time": "2022-06-23T13:30:00+00:00"
+            "time": "2022-08-13T04:39:34+00:00"
         },
         {
             "name": "alex-kalanis/kw_input",
-            "version": "v2.2.2",
+            "version": "v2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alex-kalanis/kw_input.git",
-                "reference": "23da1f5e4474e8c3539128b60cc30f776db6586f"
+                "reference": "744fa2218d79c9380746c6a7d2f36af2aef8ebd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alex-kalanis/kw_input/zipball/23da1f5e4474e8c3539128b60cc30f776db6586f",
-                "reference": "23da1f5e4474e8c3539128b60cc30f776db6586f",
+                "url": "https://api.github.com/repos/alex-kalanis/kw_input/zipball/744fa2218d79c9380746c6a7d2f36af2aef8ebd5",
+                "reference": "744fa2218d79c9380746c6a7d2f36af2aef8ebd5",
                 "shasum": ""
             },
             "require": {
@@ -259,9 +259,9 @@
             ],
             "support": {
                 "issues": "https://github.com/alex-kalanis/kw_input/issues",
-                "source": "https://github.com/alex-kalanis/kw_input/tree/v2.2.2"
+                "source": "https://github.com/alex-kalanis/kw_input/tree/v2.3.1"
             },
-            "time": "2022-06-18T00:47:12+00:00"
+            "time": "2022-08-12T14:38:39+00:00"
         },
         {
             "name": "alex-kalanis/kw_locks",
@@ -602,23 +602,23 @@
         },
         {
             "name": "alex-kalanis/kw_table",
-            "version": "v1.1.1",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/alex-kalanis/kw_table.git",
-                "reference": "1c7b908bcc9e129181b9104619d483c3e9b43c37"
+                "reference": "582caca21b8e742217b8a8b08d79154ead1ada03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alex-kalanis/kw_table/zipball/1c7b908bcc9e129181b9104619d483c3e9b43c37",
-                "reference": "1c7b908bcc9e129181b9104619d483c3e9b43c37",
+                "url": "https://api.github.com/repos/alex-kalanis/kw_table/zipball/582caca21b8e742217b8a8b08d79154ead1ada03",
+                "reference": "582caca21b8e742217b8a8b08d79154ead1ada03",
                 "shasum": ""
             },
             "require": {
                 "alex-kalanis/kw_address_handler": ">=2.0",
                 "alex-kalanis/kw_connect": ">=3.2",
                 "alex-kalanis/kw_forms": ">=2.0",
-                "alex-kalanis/kw_input": ">=2.0",
+                "alex-kalanis/kw_input": ">=2.3",
                 "alex-kalanis/kw_paging": ">=1.0",
                 "ext-mbstring": "*",
                 "php": ">=7.2.0"
@@ -671,9 +671,9 @@
             ],
             "support": {
                 "issues": "https://github.com/alex-kalanis/kw_table/issues",
-                "source": "https://github.com/alex-kalanis/kw_table/tree/v1.1.1"
+                "source": "https://github.com/alex-kalanis/kw_table/tree/v1.2.0"
             },
-            "time": "2022-08-07T16:17:36+00:00"
+            "time": "2022-08-13T05:30:21+00:00"
         },
         {
             "name": "alex-kalanis/kw_templates",

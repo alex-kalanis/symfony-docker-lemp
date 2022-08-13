@@ -3,7 +3,7 @@
 namespace kalanis\kw_clipr;
 
 
-use kalanis\kw_input\Interfaces\IVariables;
+use kalanis\kw_input\Interfaces\IFiltered;
 
 
 /**
@@ -15,12 +15,12 @@ class Clipr
 {
     /** @var Interfaces\ILoader */
     protected $loader = null;
-    /** @var IVariables */
+    /** @var IFiltered */
     protected $variables = null;
     /** @var Clipr\Sources */
     protected $sources = null;
 
-    public function __construct(Interfaces\ILoader $loader, Clipr\Sources $sources, IVariables $variables)
+    public function __construct(Interfaces\ILoader $loader, Clipr\Sources $sources, IFiltered $variables)
     {
         $this->loader = $loader;
         $this->sources = $sources;
@@ -46,7 +46,7 @@ class Clipr
     {
         // for parsing default params it's necessary to load another task
         $dummy = new Tasks\DummyTask();
-        $dummy->initTask(new Output\Clear(), $this->variables->getInArray(), $this->loader);
+        $dummy->initTask(new Output\Clear(), $this->variables, $this->loader);
         $this->sources->determineInput((bool) $dummy->webOutput, (bool) $dummy->noColor);
 
         // now we know necessary input data, so we can initialize real task
@@ -56,7 +56,7 @@ class Clipr
         if (!$task) {
             throw new CliprException(sprintf('Unknown task *%s* - check name, interface or your config paths.', $taskName));
         }
-        $task->initTask($this->sources->getOutput(), $inputs, $this->loader);
+        $task->initTask($this->sources->getOutput(), $this->variables, $this->loader);
 
         if (Interfaces\ISources::OUTPUT_STD != $task->outputFile) {
             ob_start();

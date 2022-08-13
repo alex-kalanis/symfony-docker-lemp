@@ -139,7 +139,7 @@ class IInputs:
         raise NotImplementedError('TBA')
 
 
-class IVariables:
+class IFiltered:
     """
      * Helper interface which allows us access variables from input
     """
@@ -169,3 +169,7 @@ class IVariables:
          * entries_in_object = variables.get_in_object('example', [Entries.IEntry.SOURCE_GET]);
         """
         raise NotImplementedError('TBA')
+
+
+class IVariables(IFiltered):
+    pass

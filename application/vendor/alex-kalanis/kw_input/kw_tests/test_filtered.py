@@ -1,11 +1,13 @@
 from kw_input.interfaces import IEntry, ISource
-from kw_input.input import Inputs, Variables
+from kw_input.input import Inputs
+from kw_input.entries import Entry
+from kw_input.filtered import Variables, SimpleArrays, EntryArrays
 from kw_tests.common_class import CommonTestClass
 
 
-class InputTest(CommonTestClass):
+class FilteredTest(CommonTestClass):
 
-    def test_entry(self):
+    def test_basics(self):
 
         input = MockInputs()
         input.set_source(self.cli_dataset())  # direct cli
@@ -42,6 +44,7 @@ class InputTest(CommonTestClass):
         assert 'bar' == entry.get_key()
         assert 'bal1' == entry.get_value()[0]
         assert 'bal2' == entry.get_value()[1]
+        assert IEntry.SOURCE_GET == entry.get_source()
 
         assert 'baz' in entries.keys()
         entry = entries['baz']
@@ -122,6 +125,83 @@ class InputTest(CommonTestClass):
     #     assert 'aff' not in entries
     #     setattr(entries, entry.get_key(), entry)
     #     assert entries.aff
+
+    def test_entries(self):
+
+        variables = EntryArrays([
+            ExEntry.init(IEntry.SOURCE_GET, 'foo', 'val1'),
+            ExEntry.init(IEntry.SOURCE_GET, 'bar', ['bal1', 'bal2']),
+            ExEntry.init(IEntry.SOURCE_GET, 'baz', True),
+            ExEntry.init(IEntry.SOURCE_GET, 'aff', 42),
+            ExEntry.init(IEntry.SOURCE_EXTERNAL, 'uhb', 'feaht'),
+        ])
+
+        entries = variables.get_in_array(None, [IEntry.SOURCE_GET])
+        assert entries
+
+        assert 'foo' in entries.keys()
+        entry = entries['foo']
+        assert 'foo' == entry.get_key()
+        assert 'val1' == entry.get_value()
+        assert IEntry.SOURCE_GET == entry.get_source()
+
+        assert 'bar' in entries.keys()
+        entry = entries['bar']
+        assert 'bar' == entry.get_key()
+        assert 'bal1' == entry.get_value()[0]
+        assert 'bal2' == entry.get_value()[1]
+        assert IEntry.SOURCE_GET == entry.get_source()
+
+        assert 'baz' in entries.keys()
+        entry = entries['baz']
+        assert 'baz' == entry.get_key()
+        assert True == entry.get_value()
+        assert IEntry.SOURCE_GET == entry.get_source()
+
+        assert 'aff' in entries.keys()
+        entry = entries['aff']
+        assert 'aff' == entry.get_key()
+        assert 42 == entry.get_value()
+        assert IEntry.SOURCE_GET == entry.get_source()
+
+        assert 'uhb' not in entries.keys()
+
+    def test_simple_array(self):
+
+        variables = SimpleArrays({
+            'foo': 'val1',
+            'bar': ['bal1', 'bal2'],
+            'baz': True,
+            'aff': 42,
+        }, IEntry.SOURCE_POST)
+
+        entries = variables.get_in_array(None, [IEntry.SOURCE_GET])
+        assert entries
+
+        assert 'foo' in entries.keys()
+        entry = entries['foo']
+        assert 'foo' == entry.get_key()
+        assert 'val1' == entry.get_value()
+        assert IEntry.SOURCE_POST == entry.get_source()
+
+        assert 'bar' in entries.keys()
+        entry = entries['bar']
+        assert 'bar' == entry.get_key()
+        assert 'bal1' == entry.get_value()[0]
+        assert 'bal2' == entry.get_value()[1]
+        assert IEntry.SOURCE_POST == entry.get_source()
+
+        assert 'baz' in entries.keys()
+        entry = entries['baz']
+        assert 'baz' == entry.get_key()
+        assert True == entry.get_value()
+        assert IEntry.SOURCE_POST == entry.get_source()
+
+        assert 'aff' in entries.keys()
+        entry = entries['aff']
+        assert 'aff' == entry.get_key()
+        assert 42 == entry.get_value()
+        assert IEntry.SOURCE_POST == entry.get_source()
 
 
 class MockSource(ISource):
@@ -212,3 +292,13 @@ class MockInputs(Inputs):
 
     def get_external(self):
         return self.get_in(None, IEntry.SOURCE_EXTERNAL)
+
+
+class ExEntry(Entry):
+
+    @staticmethod
+    def init(source: str, key: str, value = None) -> Entry:
+        lib = Entry()
+        lib.set_entry(source, key, value)
+        return lib
+

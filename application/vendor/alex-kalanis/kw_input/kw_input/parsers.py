@@ -77,9 +77,7 @@ class Cli(AParser):
                     inside = entry.split(Cli.DELIMITER_PARAM_VALUE, 2)
                     add_key = self._remove_null_bytes(inside[0])
                     add_value = self._remove_null_bytes(inside[1])
-                    clear_array.append((self._remove_null_bytes(inside[0]), self._remove_null_bytes(inside[1])))
                 else:
-                    clear_array.append((self._remove_null_bytes(posted), True))
                     add_key = self._remove_null_bytes(posted)
                     add_value = True
 

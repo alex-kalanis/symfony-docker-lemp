@@ -14,6 +14,7 @@ use kalanis\kw_clipr\Interfaces\ILoader;
 use kalanis\kw_clipr\Loaders\KwLoader;
 use kalanis\kw_clipr\Output\Clear;
 use kalanis\kw_clipr\Tasks\ATask;
+use kalanis\kw_input\Filtered\EntryArrays;
 
 
 class AllTest extends CommonTestClass
@@ -22,9 +23,9 @@ class AllTest extends CommonTestClass
     {
         // init
         $lib = new Info();
-        $lib->initTask(new Clear(), [
+        $lib->initTask(new Clear(), new EntryArrays([
             DummyEntry::init('q', ''),
-        ], new XLoader());
+        ]), new XLoader());
         $this->assertEquals('Info about Clipr and its inputs', $lib->desc());
         // process
         $lib->process();
@@ -35,10 +36,10 @@ class AllTest extends CommonTestClass
     {
         // init
         $lib = new Help();
-        $lib->initTask(new Clear(), [
+        $lib->initTask(new Clear(), new EntryArrays([
             DummyEntry::init('q', ''),
             DummyEntry::init('param_2', 'test'),
-        ], new XLoader());
+        ]), new XLoader());
         $this->assertEquals('Help with Clipr tasks', $lib->desc());
         $this->assertNotNull($lib);
         // process
@@ -49,9 +50,9 @@ class AllTest extends CommonTestClass
     {
         // init
         $lib = new Help();
-        $lib->initTask(new Clear(), [
+        $lib->initTask(new Clear(), new EntryArrays([
             DummyEntry::init('quiet', '1'), // full variant
-        ], null);
+        ]), null);
         $this->assertNotNull($lib);
         // process
         $lib->process();
@@ -61,9 +62,9 @@ class AllTest extends CommonTestClass
     {
         // init
         $lib = new Help();
-        $lib->initTask(new Clear(), [
+        $lib->initTask(new Clear(), new EntryArrays([
             DummyEntry::init('q', ''), // short variant
-        ], new XLoader());
+        ]), new XLoader());
         $this->assertNotNull($lib);
         // process
         $lib->process();
@@ -73,9 +74,9 @@ class AllTest extends CommonTestClass
     {
         // init
         $lib = new Lister();
-        $lib->initTask(new Clear(), [
+        $lib->initTask(new Clear(), new EntryArrays([
             DummyEntry::init('q', ''),
-        ], new XLoader());
+        ]), new XLoader());
         $this->assertEquals('Render list of tasks available in paths defined for lookup', $lib->desc());
         $this->assertNotNull($lib);
         // process
@@ -86,9 +87,9 @@ class AllTest extends CommonTestClass
     {
         // init
         $lib = new Lister();
-        $lib->initTask(new Clear(), [
+        $lib->initTask(new Clear(), new EntryArrays([
             DummyEntry::init('q', ''),
-        ], null);
+        ]), null);
         $this->assertNotNull($lib);
         // process
         $lib->process();
@@ -102,10 +103,10 @@ class AllTest extends CommonTestClass
         Paths::getInstance()->addPath('data', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'data');
         // init
         $lib = new Lister();
-        $lib->initTask(new Clear(), [
+        $lib->initTask(new Clear(), new EntryArrays([
             DummyEntry::init('q', ''),
             DummyEntry::init('path', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'data'),
-        ], new KwLoader());
+        ]), new KwLoader());
         $this->assertEquals('Render list of tasks available in paths defined for lookup', $lib->desc());
         $this->assertNotNull($lib);
         // process
@@ -116,10 +117,10 @@ class AllTest extends CommonTestClass
     {
         // init
         $lib = new Lister();
-        $lib->initTask(new Clear(), [
+        $lib->initTask(new Clear(), new EntryArrays([
             DummyEntry::init('q', ''),
             DummyEntry::init('path', 'test'),
-        ], new XLoader());
+        ]), new XLoader());
         $this->assertEquals('Render list of tasks available in paths defined for lookup', $lib->desc());
         $this->assertNotNull($lib);
         // process
@@ -130,10 +131,10 @@ class AllTest extends CommonTestClass
     {
         // init
         $lib = new Lister();
-        $lib->initTask(new Clear(), [
+        $lib->initTask(new Clear(), new EntryArrays([
             DummyEntry::init('q', ''),
             DummyEntry::init('path', __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR . 'no-data'),
-        ], new XLoader());
+        ]), new XLoader());
         $this->assertEquals('Render list of tasks available in paths defined for lookup', $lib->desc());
         $this->assertNotNull($lib);
         // process

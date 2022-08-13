@@ -20,11 +20,10 @@ use kalanis\kw_clipr\Tasks\ATask;
  */
 class KwLoader implements ILoader
 {
-    const EXT_PHP = '.php';
-
     /**
      * @param string $classFromParam
      * @throws CliprException
+     * @throws \ReflectionException
      * @return ATask|null
      * For making instances from more than one path
      * Now it's possible to read from different paths as namespace sources
@@ -39,13 +38,21 @@ class KwLoader implements ILoader
                 $translatedPath = Paths::getInstance()->classToRealFile($classPath, $namespace);
                 $realPath = $this->makeRealFilePath($path, $translatedPath);
                 require_once $realPath;
-                $class = new $classPath();
-                if ($class instanceof ATask) {
-                    return $class;
+                if (!class_exists($classPath)) {
+                    return null;
                 }
+                $reflection = new \ReflectionClass($classPath);
+                if (!$reflection->isInstantiable()) {
+                    return null;
+                }
+                $class = new $classPath();
+                if (!$class instanceof ATask) {
+                    throw new CliprException(sprintf('Class *%s* is not instance of ATask - check interface or query.', $classPath));
+                }
+                return $class;
             }
         }
-        throw new CliprException(sprintf('Unknown class *%s* - check name, interface or your config paths.', $classPath));
+        return null;
     }
 
     protected function containsPath(string $classPath, string $namespace): bool

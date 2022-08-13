@@ -33,6 +33,7 @@ class DiLoader implements ILoader
      * @throws CliprException
      * @throws Container\ContainerExceptionInterface
      * @throws Container\NotFoundExceptionInterface
+     * @throws \ReflectionException
      * @return ATask|null
      */
     public function getTask(string $classFromParam): ?ATask
@@ -42,6 +43,10 @@ class DiLoader implements ILoader
         foreach ($paths as $namespace => $path) {
             if ($this->containsPath($classPath, $namespace) && $this->container->has($classPath)) {
                 $task = $this->container->get($classPath);
+                $reflection = new \ReflectionClass($classPath);
+                if (!$reflection->isInstantiable()) {
+                    return null;
+                }
                 if (!$task instanceof ATask) {
                     throw new CliprException(sprintf('Class *%s* is not instance of ATask - check interface or query', $classPath));
                 }

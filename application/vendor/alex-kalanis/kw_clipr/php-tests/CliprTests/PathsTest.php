@@ -23,6 +23,9 @@ class PathsTest extends CommonTestClass
         $this->assertTrue($instance1 !== $instance3);
     }
 
+    /**
+     * @throws CliprException
+     */
     public function testPathNotKnow(): void
     {
         $instance = Paths::getInstance();
@@ -31,6 +34,9 @@ class PathsTest extends CommonTestClass
         $instance->clearPaths();
     }
 
+    /**
+     * @throws CliprException
+     */
     public function testPaths(): void
     {
         $instance = Paths::getInstance();
